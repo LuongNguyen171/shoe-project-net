@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HdJ8rshd0cn/uIr4mIMQPRrGPSLHAbZ+RuQ3/R2GZwWU83JITzgDCnrQwKi0ejRP5h/hgB5KbVC40Q6VvxGlSw==",
+  "dgSpecHash": "Xlk6jFPOrcLyranhgIdrStUfF21bNxI+plPAiMjR34/PnBgg9E89yXWu45PC8XQhJbkVN42B34eQqExWOh8ZQw==",
   "success": true,
-  "projectFilePath": "D:\\.NET\\shoe-project\\shoe_project_server\\shoe_project_server.csproj",
+  "projectFilePath": "D:\\.NET\\shoe-project\\shoe-sever\\shoe_project_server\\shoe_project_server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.13\\microsoft.entityframeworkcore.7.0.13.nupkg.sha512",
