@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="shoe_project_xamarin.Views.DefaultLayout.Header">
+  <ContentView.Content>
+      <StackLayout>
+            <Label Text="Header Line 1"
+                   FontSize="16" />
+            <Label Text="Header Line 2"
+                   FontSize="12" />
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

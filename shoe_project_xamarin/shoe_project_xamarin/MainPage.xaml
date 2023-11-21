@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:shoe_project_xamarin.Views.Pages"
+       x:Class="shoe_project_xamarin.MainPage">
+    
+    <TabBar Route="main"
+            Title="MySportShop">
+        <ShellContent Title="Trang Chủ"
+                      Icon="./Assets/Images/homeIcon.png"
+                      ContentTemplate="{DataTemplate views:Home}"></ShellContent>
+       
+        <ShellContent Title="Sản Phẩm"
+                      Icon="CartIcon.png"
+                      ContentTemplate="{DataTemplate views:Home}"></ShellContent>
+       
+        <ShellContent Title="Giỏ hàng"
+                      Icon="UserIcon.png"
+                      ContentTemplate="{DataTemplate views:Cart}"></ShellContent>
+        <ShellContent Title="Tài khoản"
+                      Icon="UserIcon.png"
+                      ContentTemplate="{DataTemplate views:Account}"></ShellContent>
+    </TabBar>
+</Shell>

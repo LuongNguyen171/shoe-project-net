@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "J5OnbArYrZanIk3GZnpAlz7Jb9Cuh7usbTW2tF7aEaVuGC7l9b/O7I3wWNCPz/jUEGFsUA4qFPX0KrLStRISXg==",
+  "success": true,
+  "projectFilePath": "D:\\.NET\\shoe-project-server\\shoe_project_xamarin\\shoe_project_xamarin.iOS\\shoe_project_xamarin.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
