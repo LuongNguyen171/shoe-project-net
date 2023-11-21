@@ -1,0 +1,36 @@
+=======================Shoe project .NET==============================
+
+1. TẠO CỞ DỮ LIỆU
+
+chạy lệnh Add-Migration initDB ->> Update-Database
+
+
+2.API 
+
+* Product:
+--Lất tất cả sản phẩm
+--Lấy chi tiết sản phẩm theo ID(lấy tất cả trong table Product)
+--Lấy chi tiết mẫu theo productId(product id, size, color)
+--Thêm, xoá, sửa,Tìm kiếm sản phẩm
+--Thêm sản phẩm vào giỏ hàng (*)
+--Mua sản phẩm
+--Lấy tên hãng theo Id hãng
+
+
+* User:
+--Đăng nhập(customer , admin)
+--Đăng kí(customer)
+--Đăng nhập bằng google,facebook(customer)
+--Thay đổi mật khẩu
+--Quên mật khẩu(send mail)
+--Lấy thông tin người dùng (theo email)
+--Thêm, xoá, sửa,tìm kiếm người dùng
+--Show chi tiết đơn hàng,lịch sử mua hàng
+--Chat real time
+--Thanh toán VNPay(momo, payPal,...)
+
+
+
+
+
+
