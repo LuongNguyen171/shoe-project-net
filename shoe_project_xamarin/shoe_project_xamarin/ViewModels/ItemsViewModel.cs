@@ -10,7 +10,7 @@ namespace shoe_project_xamarin.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {
-        private Item _selectedItem;
+        /*private Item _selectedItem;
 
         public ObservableCollection<Item> Items { get; }
         public Command LoadItemsCommand { get; }
@@ -69,7 +69,7 @@ namespace shoe_project_xamarin.ViewModels
 
         private async void OnAddItem(object obj)
         {
-            await Shell.Current.GoToAsync(nameof(NewItemPage));
+           *//**//* await Shell.Current.GoToAsync(nameof(NewItemPage));
         }
 
         async void OnItemSelected(Item item)
@@ -79,6 +79,6 @@ namespace shoe_project_xamarin.ViewModels
 
             // This will push the ItemDetailPage onto the navigation stack
             await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
-        }
+        }*/
     }
 }

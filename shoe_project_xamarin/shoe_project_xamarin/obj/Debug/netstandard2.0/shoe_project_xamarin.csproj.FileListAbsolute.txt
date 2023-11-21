@@ -63,3 +63,8 @@ D:\.NET\shoe-project\shoe_project_xamarin\shoe_project_xamarin\obj\Debug\netstan
 D:\.NET\shoe-project\shoe_project_xamarin\shoe_project_xamarin\obj\Debug\netstandard2.0\shoe_project_xamarin.dll
 D:\.NET\shoe-project\shoe_project_xamarin\shoe_project_xamarin\obj\Debug\netstandard2.0\refint\shoe_project_xamarin.dll
 D:\.NET\shoe-project\shoe_project_xamarin\shoe_project_xamarin\obj\Debug\netstandard2.0\shoe_project_xamarin.pdb
+D:\.NET\shoe-project\shoe_project_xamarin\shoe_project_xamarin\bin\Debug\netstandard2.0\shoe_project_xamarin.deps.json
+D:\.NET\shoe-project\shoe_project_xamarin\shoe_project_xamarin\bin\Debug\netstandard2.0\shoe_project_xamarin.dll
+D:\.NET\shoe-project\shoe_project_xamarin\shoe_project_xamarin\bin\Debug\netstandard2.0\shoe_project_xamarin.pdb
+D:\.NET\shoe-project\shoe_project_xamarin\shoe_project_xamarin\obj\Debug\netstandard2.0\XamlC.stamp
+D:\.NET\shoe-project\shoe_project_xamarin\shoe_project_xamarin\obj\Debug\netstandard2.0\ref\shoe_project_xamarin.dll
