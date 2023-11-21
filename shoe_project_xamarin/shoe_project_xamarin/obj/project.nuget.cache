@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BZwUKwoGkAxZejZWEMJcTA+GaiLI9zgMkA+tj5fv33cLT2Y4UpF/uqIKMCrx0D85vAcwpCh1heBZsjl2MBtMNg==",
+  "dgSpecHash": "Q+8AZ/1TjWLLAA0cf6RgqQOt5B0Ny2ooeUPoNL9hjYpk49zcuUlGxVnGBH3fOJ4co+RMj9pUNKPiZcRQfh6Fgg==",
   "success": true,
-  "projectFilePath": "D:\\.NET\\shoe-project\\shoe_project_xamarin\\shoe_project_xamarin\\shoe_project_xamarin.csproj",
+  "projectFilePath": "D:\\.NET\\ggg\\shoe-pproject-net\\shoe_project_xamarin\\shoe_project_xamarin\\shoe_project_xamarin.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

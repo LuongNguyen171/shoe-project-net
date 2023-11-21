@@ -3414,11 +3414,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\.NET\\shoe-project\\shoe_project_xamarin\\shoe_project_xamarin.Android\\shoe_project_xamarin.Android.csproj",
+      "projectUniqueName": "D:\\.NET\\ggg\\shoe-pproject-net\\shoe_project_xamarin\\shoe_project_xamarin.Android\\shoe_project_xamarin.Android.csproj",
       "projectName": "shoe_project_xamarin.Android",
-      "projectPath": "D:\\.NET\\shoe-project\\shoe_project_xamarin\\shoe_project_xamarin.Android\\shoe_project_xamarin.Android.csproj",
+      "projectPath": "D:\\.NET\\ggg\\shoe-pproject-net\\shoe_project_xamarin\\shoe_project_xamarin.Android\\shoe_project_xamarin.Android.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\.NET\\shoe-project\\shoe_project_xamarin\\shoe_project_xamarin.Android\\obj\\",
+      "outputPath": "D:\\.NET\\ggg\\shoe-pproject-net\\shoe_project_xamarin\\shoe_project_xamarin.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -3439,8 +3439,8 @@
       "frameworks": {
         "monoandroid12.0": {
           "projectReferences": {
-            "D:\\.NET\\shoe-project\\shoe_project_xamarin\\shoe_project_xamarin\\shoe_project_xamarin.csproj": {
-              "projectPath": "D:\\.NET\\shoe-project\\shoe_project_xamarin\\shoe_project_xamarin\\shoe_project_xamarin.csproj"
+            "D:\\.NET\\ggg\\shoe-pproject-net\\shoe_project_xamarin\\shoe_project_xamarin\\shoe_project_xamarin.csproj": {
+              "projectPath": "D:\\.NET\\ggg\\shoe-pproject-net\\shoe_project_xamarin\\shoe_project_xamarin\\shoe_project_xamarin.csproj"
             }
           }
         }

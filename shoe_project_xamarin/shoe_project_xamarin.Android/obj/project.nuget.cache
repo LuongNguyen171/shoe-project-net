@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wGKKoWr7I7KDga+GNkUCtsbHpfH6XZaH9k5Z+wRPpKJgufMazizoPQ6xbvPjK9lo1xn6nkoWjgmM/zuajeciRA==",
+  "dgSpecHash": "I6uvbiQ4cnwOI0pbuHsEt2azgddmFtiEvQNuQ3gP+Oc//NzdGazhglfRuKjwenb9pEO+sSOkWjoY/Hywvoe8iQ==",
   "success": true,
-  "projectFilePath": "D:\\.NET\\shoe-project\\shoe_project_xamarin\\shoe_project_xamarin.Android\\shoe_project_xamarin.Android.csproj",
+  "projectFilePath": "D:\\.NET\\ggg\\shoe-pproject-net\\shoe_project_xamarin\\shoe_project_xamarin.Android\\shoe_project_xamarin.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",

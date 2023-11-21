@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.NET\\shoe-project\\shoe_project_xamarin\\shoe_project_xamarin\\shoe_project_xamarin.csproj": {}
+    "D:\\.NET\\ggg\\shoe-pproject-net\\shoe_project_xamarin\\shoe_project_xamarin\\shoe_project_xamarin.csproj": {}
   },
   "projects": {
-    "D:\\.NET\\shoe-project\\shoe_project_xamarin\\shoe_project_xamarin\\shoe_project_xamarin.csproj": {
+    "D:\\.NET\\ggg\\shoe-pproject-net\\shoe_project_xamarin\\shoe_project_xamarin\\shoe_project_xamarin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.NET\\shoe-project\\shoe_project_xamarin\\shoe_project_xamarin\\shoe_project_xamarin.csproj",
+        "projectUniqueName": "D:\\.NET\\ggg\\shoe-pproject-net\\shoe_project_xamarin\\shoe_project_xamarin\\shoe_project_xamarin.csproj",
         "projectName": "shoe_project_xamarin",
-        "projectPath": "D:\\.NET\\shoe-project\\shoe_project_xamarin\\shoe_project_xamarin\\shoe_project_xamarin.csproj",
+        "projectPath": "D:\\.NET\\ggg\\shoe-pproject-net\\shoe_project_xamarin\\shoe_project_xamarin\\shoe_project_xamarin.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\.NET\\shoe-project\\shoe_project_xamarin\\shoe_project_xamarin\\obj\\",
+        "outputPath": "D:\\.NET\\ggg\\shoe-pproject-net\\shoe_project_xamarin\\shoe_project_xamarin\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
