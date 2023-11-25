@@ -29,6 +29,29 @@
                     <local:Footer Grid.Row="2" />
                 </Grid>
             </ControlTemplate>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor"
+                        Value="Black" />
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="TextColor"
+                        Value="Black" />
+            </Style>
+
+            <Style TargetType="Entry">
+                <Setter Property="TextColor"
+                        Value="Black" />
+            </Style>
+
+            <Style TargetType="Editor">
+                <Setter Property="TextColor"
+                        Value="Black" />
+            </Style>
+
+           
+
         </ResourceDictionary>        
     </Application.Resources>
 </Application>
