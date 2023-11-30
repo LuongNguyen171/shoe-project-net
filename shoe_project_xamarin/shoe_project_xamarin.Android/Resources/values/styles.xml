@@ -15,4 +15,6 @@
          which is used to tint widgets -->
     <!--<item name="colorAccent">#FF4081</item>-->
   </style>
+
+	<color name="defaultTextColor">#000000</color>
 </resources>

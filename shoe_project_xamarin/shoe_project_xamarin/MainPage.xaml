@@ -8,7 +8,8 @@
             Title="MySportShop">
         <ShellContent Title="Trang Chủ"
                       Icon="./Assets/Images/homeIcon.png"
-                      ContentTemplate="{DataTemplate views:Home}"></ShellContent>
+                      ContentTemplate="{DataTemplate views:Home}">
+        </ShellContent>
        
         <ShellContent Title="Sản Phẩm"
                       Icon="CartIcon.png"
