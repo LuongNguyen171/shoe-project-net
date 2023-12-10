@@ -2,12 +2,207 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="shoe_project_xamarin.Views.Pages.Login"
-             ControlTemplate="{StaticResource DefaultLayout}">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+             ControlTemplate="{StaticResource OnlyContentLayout}">
+    <ContentPage.Content >
+        <StackLayout BackgroundColor="#e6e6e6"
+                     HeightRequest="1000">
+            <Grid  >
+                <StackLayout Padding="0"
+                             Margin="0"
+                             HorizontalOptions="FillAndExpand">
+                    <Frame HeightRequest="150"
+                           Padding="0"
+                           Margin="0">
+                        <Image Source="https://xindadisplay.com/wp-content/uploads/2019/10/retail-sports-shop-design-sportswear-store-display-sport-shop-interior-design-1.jpg"
+                               Aspect="AspectFill"
+                               Margin="0" />
+                    </Frame>
+                </StackLayout>
+                <StackLayout Padding="0"
+                             Margin="10,90,10,0"
+                             HorizontalOptions="FillAndExpand">
+                    <Frame  BackgroundColor="White"
+                            HeightRequest="500"
+                            HasShadow="True"
+                            CornerRadius="10"
+                            Padding="0"
+                            Margin="0, 20, 0, 0">
+
+                        <StackLayout>
+                            <StackLayout Margin="15">
+                                <Label Text="ĐĂNG NHẬP"
+                                       FontSize="Medium"
+                                       TextColor="Black"
+                                       HorizontalOptions="CenterAndExpand"
+                                       FontAttributes="Bold" />
+                            </StackLayout>
+
+                            <StackLayout Padding="0"
+                                         Margin="15,10">
+                                <Frame BackgroundColor="Transparent"
+                                       BorderColor="DarkGray"
+                                       Padding="0"
+                                       HorizontalOptions="FillAndExpand"
+                                       CornerRadius="30">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Frame BackgroundColor="SkyBlue"
+                                               HeightRequest="40"
+                                               WidthRequest="40"
+                                               CornerRadius="30"
+                                               Padding="0"
+                                               Margin="5">
+                                            <Image Source="https://www.findool.com/images/avatars/avatar.png"
+                                                   Aspect="AspectFill"
+                                                   Margin="0" />
+                                        </Frame>
+
+                                        <Entry Placeholder="Username"
+                                               FontAttributes="None"
+                                               HorizontalOptions="FillAndExpand"
+                                               Margin="0,0,40,0"
+                                               x:Name="EntryUserName" />
+                                    </StackLayout>
+                                </Frame>
+                                
+                                
+
+                                <Frame BackgroundColor="Transparent"
+                                       BorderColor="DarkGray"
+                                       Margin="0,15,0,0"
+                                       Padding="0"
+                                       HorizontalOptions="FillAndExpand"
+                                       CornerRadius="30">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Frame BackgroundColor="SkyBlue"
+                                               HeightRequest="40"
+                                               WidthRequest="40"
+                                               CornerRadius="30"
+                                               Padding="0"
+                                               Margin="5">
+                                            <Image Source="https://images.all-free-download.com/images/graphicthumb/lock_icon_6813906.jpg"
+                                                   Aspect="AspectFill"
+                                                   Margin="0" />
+                                        </Frame>
+
+                                        <Entry Placeholder="Password"
+                                               IsPassword="True"
+                                               FontAttributes="None"
+                                               HorizontalOptions="FillAndExpand"
+                                               x:Name="EntryPassword" />
+                                        <Image Source="https://cdn-icons-png.flaticon.com/512/65/65000.png"
+                                               HeightRequest="30"
+                                               Margin="0,0,10,0">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer x:Name="EyePassword"
+                                                                      Tapped="EyePassword_Tapped"></TapGestureRecognizer>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                    </StackLayout>
+                                </Frame>
+
+                                <StackLayout  Orientation="Horizontal">
+                                    <CheckBox IsChecked="False"
+                                              Color="DeepSkyBlue" />
+                                    <Label Text="Remember me"
+                                           TextColor="DarkGray"
+                                           FontSize="Small"
+                                           VerticalTextAlignment="Center"
+                                           HorizontalTextAlignment="Center" />
+
+                                    <Label Text="Quên mật khẩu"
+                                           TextColor="DeepSkyBlue"
+                                           FontAttributes="Bold"
+                                           HorizontalOptions="EndAndExpand"
+                                           FontSize="Small"
+                                           VerticalTextAlignment="Center"
+                                           HorizontalTextAlignment="Center" />
+                                </StackLayout>
+
+                                <Button Text="Đăng nhập"
+                                        BackgroundColor="DeepSkyBlue"
+                                        TextColor="White"
+                                        CornerRadius="30"
+                                        x:Name="BtnSignIn"
+                                        Clicked="BtnSignIn_Clicked" />
+
+                                <StackLayout Orientation="Horizontal"
+                                             HorizontalOptions="CenterAndExpand">
+                                    <Label Text="No account?"
+                                           TextColor="DarkGray"
+                                           FontSize="Small" />
+                                    <Label Text="Đăng ký"
+                                           TextColor="DeepSkyBlue"
+                                           FontAttributes="Bold"
+                                           FontSize="Small">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer x:Name="LabelSignUp"
+                                                                  Tapped="LabelSignUp_Tapped" />
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </StackLayout>
+
+                                <StackLayout Margin="0,25,0,0"
+                                             Padding="0">
+                                    <Grid>
+                                        <BoxView BackgroundColor="DarkGray"
+                                                 HeightRequest="1"
+                                                 WidthRequest="150"
+                                                 HorizontalOptions="Center"
+                                                 VerticalOptions="Center" />
+                                        <Frame BackgroundColor="White"
+                                               HeightRequest="45"
+                                               WidthRequest="45"
+                                               CornerRadius="45"
+                                               HasShadow="False"
+                                               BorderColor="DarkGray"
+                                               Margin="0"
+                                               HorizontalOptions="Center"
+                                               Padding="0">
+                                            <Label Text="OR"
+                                                   TextColor="DarkGray"
+                                                   FontSize="Small"
+                                                   VerticalTextAlignment="Center"
+                                                   HorizontalTextAlignment="Center" />
+                                        </Frame>
+                                    </Grid>
+                                </StackLayout>
+
+                                <StackLayout Margin="0,25"
+                                             Orientation="Horizontal"
+                                             HorizontalOptions="CenterAndExpand">
+                                    <Frame BackgroundColor="White"
+                                           HeightRequest="45"
+                                           WidthRequest="45"
+                                           CornerRadius="45"
+                                           HasShadow="False"
+                                           BorderColor="DarkGray"
+                                           Margin="0"
+                                           HorizontalOptions="Center"
+                                           Padding="0">
+                                        <Image Source="https://www.pngitem.com/pimgs/m/44-440455_transparent-background-fb-logo-hd-png-download.png"
+                                               Aspect="AspectFill"
+                                               Margin="0" />
+                                    </Frame>
+                                    <Frame BackgroundColor="White"
+                                           HeightRequest="45"
+                                           WidthRequest="45"
+                                           CornerRadius="45"
+                                           HasShadow="False"
+                                           BorderColor="DarkGray"
+                                           Margin="0"
+                                           HorizontalOptions="Center"
+                                           Padding="0">
+                                        <Image Source="https://blog.hubspot.com/hubfs/image8-2.jpg"
+                                               Aspect="AspectFill"
+                                               Margin="0" />
+                                    </Frame>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </Grid>
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>

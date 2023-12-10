@@ -14,8 +14,7 @@ namespace shoe_project_xamarin
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
-            MainPage = new MainPage();
+            MainPage = new Login();
         }
 
         protected override void OnStart()

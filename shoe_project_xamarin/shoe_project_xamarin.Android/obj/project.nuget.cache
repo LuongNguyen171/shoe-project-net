@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "wGKKoWr7I7KDga+GNkUCtsbHpfH6XZaH9k5Z+wRPpKJgufMazizoPQ6xbvPjK9lo1xn6nkoWjgmM/zuajeciRA==",
+  "dgSpecHash": "ATJagXYjPqJVxueSvtKgIKsjJfP+3jphlA66AcrmfxoRfeYDp7YJBwhmHbse6ofx2xLV7mm967uedkRw5Yt2FQ==",
   "success": true,
   "projectFilePath": "D:\\.NET\\shoe-project\\shoe_project_xamarin\\shoe_project_xamarin.Android\\shoe_project_xamarin.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\plugin.toast\\2.2.0\\plugin.toast.2.2.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\xamarin.androidx.annotation\\1.2.0.1\\xamarin.androidx.annotation.1.2.0.1.nupkg.sha512",

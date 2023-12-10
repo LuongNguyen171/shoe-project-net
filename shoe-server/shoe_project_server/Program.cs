@@ -6,7 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using shoe_project_server.Data;
 using System.Configuration;
 using System.Text;
-using Microsoft.Extensions.Configuration; 
+using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +23,7 @@ var Configuration = new ConfigurationBuilder()
     .SetBasePath(Directory.GetCurrentDirectory())
     .AddJsonFile("appsettings.json")
     .Build();
+
 
 var connectionString = builder.Configuration.GetConnectionString("mySqlConnection");
 
@@ -65,6 +66,7 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -72,7 +74,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+app.UseSwagger();
+app.UseSwaggerUI();
+
+/*app.UseHttpsRedirection();*/
 
 app.UseAuthorization();
 
