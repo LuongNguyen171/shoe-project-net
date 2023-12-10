@@ -3,11 +3,58 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="shoe_project_xamarin.Views.DefaultLayout.Footer">
   <ContentView.Content>
-      <StackLayout>
-            <Label Text="Footer Line 1"
-                   FontSize="16" />
-            <Label Text="Footer Line 2"
-                   FontSize="12" />
+        <StackLayout Spacing="0" BackgroundColor="Black" Padding="15">
+            <Label Text="About Us"
+                   FontSize="25"
+                   Padding="5"
+                   TextColor="WhiteSmoke"/>
+            <StackLayout Padding="15,0,0,0">
+                    <Label Text="Nguyễn Hữu Lương – 20521589"
+                           FontSize="16"
+                           TextColor="WhiteSmoke"/>
+                    <Label Text="Nguyễn Hoàng Duy – 20521239"
+                           FontSize="16"
+                           TextColor="WhiteSmoke"/>
+                    <Label Text="Phạm Ngọc Quí – 21520419"
+                           FontSize="16" 
+                           TextColor="WhiteSmoke"/>
+                    <Label Text="Trần Nhựt Phát – 21520390"
+                           FontSize="16" 
+                           TextColor="WhiteSmoke"/>
+            </StackLayout>
+            <Label Text="About Shoes Store"
+                   FontSize="25" 
+                   Padding="5"
+                   TextColor="WhiteSmoke"/>
+            <StackLayout Orientation="Horizontal" Padding="5">
+                <Image Source="facebook.jpg"
+                       WidthRequest="{OnPlatform iOS=30, Android=30}"
+                       Margin="5,0,5,0">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnTapGestureRecognizerTapped"
+                            CommandParameter="https://www.facebook.com"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="instagram.jpg"
+                       WidthRequest="{OnPlatform iOS=35, Android=35}"
+                       Margin="5,0,5,0">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnTapGestureRecognizerTapped"
+                            CommandParameter="https://www.instagram.com"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="twitter.jpg"
+                       WidthRequest="{OnPlatform iOS=30, Android=30}"
+                       Margin="5,0,5,0">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnTapGestureRecognizerTapped"
+                            CommandParameter="https://www.twitter.com"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
         </StackLayout>
-  </ContentView.Content>
+    </ContentView.Content>
 </ContentView>

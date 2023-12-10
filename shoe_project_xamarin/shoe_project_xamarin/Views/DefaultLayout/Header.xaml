@@ -2,12 +2,20 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="shoe_project_xamarin.Views.DefaultLayout.Header">
-  <ContentView.Content>
-      <StackLayout>
-            <Label Text="Header Line 1"
-                   FontSize="16" />
-            <Label Text="Header Line 2"
-                   FontSize="12" />
+    <StackLayout Spacing="0" BackgroundColor="#F2F2F2">
+        <StackLayout Orientation="Horizontal" Padding="15" HorizontalOptions="Start">
+            <Label Text="Shoes Store App" FontSize="20" Margin="0,0,108,0"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                <Image Source="searchIcon.jpg"
+                               WidthRequest="{OnPlatform iOS=20, Android=20}"
+                               Margin="5,0,5,0"/>
+                <Image Source="cartIcon.jpg"     
+                               WidthRequest="{OnPlatform iOS=25, Android=25}"
+                               Margin="5,0,5,0"/>
+                <Image Source="userIcon.jpg"
+                               WidthRequest="{OnPlatform iOS=20, Android=20}"
+                               Margin="5,0,5,0"/>
+            </StackLayout>
         </StackLayout>
-  </ContentView.Content>
+    </StackLayout>
 </ContentView>

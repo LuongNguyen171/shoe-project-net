@@ -2,7 +2,9 @@
 using shoe_project_xamarin.Views;
 using System;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -10,6 +12,21 @@ namespace shoe_project_xamarin.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {
+
+        protected bool SetProperty<T>(ref T field, T newValue, [CallerMemberName] string propertyName = null)
+        {
+            if (!Equals(field, newValue))
+            {
+                field = newValue;
+                return true;
+            }
+
+            return false;
+        }
+
+        private System.Collections.IEnumerable items;
+
+        public System.Collections.IEnumerable Items { get => items; set => SetProperty(ref items, value); }
         /*private Item _selectedItem;
 
         public ObservableCollection<Item> Items { get; }
