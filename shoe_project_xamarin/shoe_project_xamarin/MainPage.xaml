@@ -13,7 +13,7 @@
        
         <ShellContent Title="Sản Phẩm"
                       Icon="CartIcon.png"
-                      ContentTemplate="{DataTemplate views:Home}"></ShellContent>
+                      ContentTemplate="{DataTemplate views:ProductDetail}"></ShellContent>
        
         <ShellContent Title="Giỏ hàng"
                       Icon="UserIcon.png"

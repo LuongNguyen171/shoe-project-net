@@ -1,13 +1,125 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:shoe_project_xamarin"
              x:Class="shoe_project_xamarin.Views.Pages.Cart"
              ControlTemplate="{StaticResource DefaultLayout}">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <!-- List Items -->
+                <CollectionView ItemsLayout="VerticalList" x:Name="listImg" SelectionMode="Single" VerticalOptions="FillAndExpand" HeightRequest="500">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Margin="0,0,0,20">
+                                    <Image Source="{Binding productImage}"
+                                           WidthRequest="{OnPlatform iOS=20, Android=100}"
+                                           HeightRequest="{OnPlatform iOS=20, Android=100}"
+                                           Margin="5,0,5,0"/>
+                                    <StackLayout x:Name="DetailIinfo" Spacing="0">
+                                        <Label Text="{Binding productName}"/>
+                                        <Label Text="Basketball" TextColor="Gray"/>
+                                        <StackLayout Orientation="Horizontal">
+                                            <StackLayout Orientation="Horizontal" x:Name="sizeInfo">
+                                                <Label 
+                                                    Grid.Column="0" 
+                                                    Text="Size" 
+                                                    TextColor="Gray" 
+                                                    VerticalOptions="CenterAndExpand"
+                                                    Padding="0,0,0,0"
+                                                >
+                                                </Label>
+                                                <local:CustomPicker 
+                                                    x:Name="myPickerSize" 
+                                                    Title=" " 
+                                                    TitleColor="Gray" 
+                                                    TextColor="Gray"
+                                                    FontSize="Small" 
+                                                    HeightRequest="22"
+                                                    WidthRequest="50"
+                                                    >
+                                                    <local:CustomPicker.ItemsSource>
+                                                        <x:Array Type="{x:Type x:String}">
+                                                            <x:String>37</x:String>
+                                                            <x:String>38</x:String>
+                                                            <x:String>39</x:String>
+                                                        </x:Array>
+                                                    </local:CustomPicker.ItemsSource>
+                                                </local:CustomPicker>
+                                            </StackLayout>
+
+                                            <StackLayout Orientation="Horizontal" x:Name="quantityInfo">
+                                                <Label 
+                                                    Grid.Column="0" 
+                                                    Text="Quantity" 
+                                                    TextColor="Gray" 
+                                                    VerticalOptions="CenterAndExpand"
+                                                    Padding="0,0,0,0"
+                                                >
+                                                </Label>
+                                                <local:CustomPicker 
+                                                        x:Name="myPickerQuantity" 
+                                                        Title=" " 
+                                                        TitleColor="Gray" 
+                                                        TextColor="Gray"
+                                                        FontSize="Small" 
+                                                        HeightRequest="22"
+                                                        WidthRequest="40"
+                                                    >
+                                                    <local:CustomPicker.ItemsSource>
+                                                        <x:Array Type="{x:Type x:String}">
+                                                            <x:String>1</x:String>
+                                                            <x:String>2</x:String>
+                                                            <x:String>3</x:String>
+                                                        </x:Array>
+                                                    </local:CustomPicker.ItemsSource>
+                                                </local:CustomPicker>
+                                            </StackLayout>
+                                        </StackLayout>
+
+                                        <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+                                            <Image Source="heart.png"
+                                                   WidthRequest="{OnPlatform iOS=20, Android=20}"
+                                                   Margin="0,0,5,0"/>
+                                            <Image Source="delete.png" 
+                                                   WidthRequest="{OnPlatform iOS=20, Android=20}"
+                                                   Margin="0,0,5,0"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                    <Label Text="2,300,000 đ" FontAttributes="Bold"/>
+                                </StackLayout>
+
+                                <BoxView HeightRequest="1" Color="Gray" HorizontalOptions="FillAndExpand" Margin="0,0,0,10"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                <!-- Summary -->
+                <StackLayout>
+                    <Label Text="Summary" FontSize="20" Margin="10,0,5,10"/>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout Orientation="Horizontal" >
+                            <Label Text="Subtotal" Margin="10,0,5,0"/>
+                            <Image Source="question.png" WidthRequest="{OnPlatform iOS=15, Android=15}"/>
+                        </StackLayout>
+                        <Label Text="2,300,000 đ" HorizontalOptions="EndAndExpand" Margin="0,0,10,0" FontAttributes="Bold"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Estimated Delivery &amp; Handling" Margin="10,0,5,0"/>
+                        <Label Text="100,000 đ" HorizontalOptions="EndAndExpand" Margin="0,0,10,0" FontAttributes="Bold"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Total" Margin="10,10,5,0"/>
+                        <Label Text="2,400,000 đ" HorizontalOptions="EndAndExpand" Margin="0,10,10,0"/>
+                    </StackLayout>
+                </StackLayout>
+                <!-- Button checkout -->
+                <Button Text="Go to Checkout" BackgroundColor="Black" TextColor="White" Margin="10,20,10,0" CornerRadius="50" ></Button>
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
