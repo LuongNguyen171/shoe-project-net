@@ -116,7 +116,7 @@
                                                HorizontalOptions="FillAndExpand"
                                                Margin="0,0,20,0"
                                                x:Name="EntryPassword" />
-                                        <Image Source="https://cdn-icons-png.flaticon.com/512/65/65000.png"
+                                        <Image Source="CsEye_icon.png"
                                                HeightRequest="30"
                                                Margin="0,0,10,0">
                                             <Image.GestureRecognizers>
@@ -178,28 +178,28 @@
                                              Orientation="Horizontal"
                                              HorizontalOptions="CenterAndExpand">
                                     <Frame BackgroundColor="White"
-                                           HeightRequest="45"
-                                           WidthRequest="45"
-                                           CornerRadius="45"
+                                           HeightRequest="40"
+                                           WidthRequest="40"
+                                           CornerRadius="40"
                                            HasShadow="False"
                                            BorderColor="DarkGray"
                                            Margin="0"
                                            HorizontalOptions="Center"
-                                           Padding="0">
-                                        <Image Source="https://www.pngitem.com/pimgs/m/44-440455_transparent-background-fb-logo-hd-png-download.png"
+                                           Padding="3">
+                                        <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png"
                                                Aspect="AspectFill"
                                                Margin="0" />
                                     </Frame>
                                     <Frame BackgroundColor="White"
-                                           HeightRequest="45"
-                                           WidthRequest="45"
-                                           CornerRadius="45"
+                                           HeightRequest="40"
+                                           WidthRequest="40"
+                                           CornerRadius="40"
                                            HasShadow="False"
                                            BorderColor="DarkGray"
                                            Margin="0"
                                            HorizontalOptions="Center"
-                                           Padding="0">
-                                        <Image Source="https://blog.hubspot.com/hubfs/image8-2.jpg"
+                                           Padding="3">
+                                        <Image Source="Gg_logo.png"
                                                Aspect="AspectFill"
                                                Margin="0" />
                                     </Frame>

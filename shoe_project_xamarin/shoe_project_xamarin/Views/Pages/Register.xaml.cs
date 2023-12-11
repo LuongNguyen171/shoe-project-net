@@ -11,8 +11,8 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Plugin.Toast;
 using Newtonsoft.Json.Serialization;
-using static System.Net.WebRequestMethods;
 using shoe_project_server.Models.HostConfig;
+using shoe_project_xamarin.Models.DTOs.Auth;
 
 namespace shoe_project_xamarin.Views.Pages
 {
@@ -65,28 +65,38 @@ namespace shoe_project_xamarin.Views.Pages
                         {
                             if (response.IsSuccessStatusCode)
                             {
-                                await DisplayAlert("Thông báo", "Đăng ký thành công!", "ok");
+                                var successContent = await response.Content.ReadAsStringAsync();
+                                var registerSuccessResponse = JsonConvert.DeserializeObject<RegisterSuccessResponse>(successContent);
+                                string messageRes = registerSuccessResponse.message;
+                                string userNameRes = registerSuccessResponse.userName;
+                                 CrossToastPopUp.Current.ShowToastSuccess($"{messageRes} : welcome : {userNameRes}");
+
+                                await Navigation.PushAsync(new MainPage());
                             }
                             else
                             {
                                 var errorContent = await response.Content.ReadAsStringAsync();
-                                await DisplayAlert("Thông báo",  $"Đăng nhập thất bại! {response.RequestMessage}", "ok");
+                                var registerErrorResponse = JsonConvert.DeserializeObject<RegisterErrorResponse>(errorContent);
+                                string messageRes = registerErrorResponse.message;
+                                string descriptionRes = registerErrorResponse.errors?.FirstOrDefault()?.Description;
+                                CrossToastPopUp.Current.ShowToastError($"{messageRes} :{ descriptionRes}");
                             }
                         }
                         else
                         {
-                            await DisplayAlert("Thông báo", "Đăng ký thất bại! Phản hồi trống.", "ok");
+                            CrossToastPopUp.Current.ShowToastError("Registration failed! Response is empty.");
+
                         }
                     }
                 }
                 else
                 {
-                    await DisplayAlert("Thông báo", "Lỗi đối tượng Entry.", "ok");
+                    CrossToastPopUp.Current.ShowToastError("input cannot be empty!");
                 }
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Thông báo", $"Đăng ký thất bại! Lỗi kết nối: {ex.Message}", "ok");
+                CrossToastPopUp.Current.ShowToastError("connection errors!");
             }
         }
 

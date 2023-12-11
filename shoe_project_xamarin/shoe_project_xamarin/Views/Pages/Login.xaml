@@ -123,7 +123,7 @@
                                         TextColor="White"
                                         CornerRadius="30"
                                         x:Name="BtnSignIn"
-                                        Clicked="BtnSignIn_Clicked" />
+                                        Clicked="BtnLogin_Clicked" />
 
                                 <StackLayout Orientation="Horizontal"
                                              HorizontalOptions="CenterAndExpand">
@@ -167,32 +167,32 @@
                                     </Grid>
                                 </StackLayout>
 
-                                <StackLayout Margin="0,25"
+                                <StackLayout Margin="0,0"
                                              Orientation="Horizontal"
                                              HorizontalOptions="CenterAndExpand">
                                     <Frame BackgroundColor="White"
-                                           HeightRequest="45"
-                                           WidthRequest="45"
-                                           CornerRadius="45"
+                                           HeightRequest="40"
+                                           WidthRequest="40"
+                                           CornerRadius="40"
                                            HasShadow="False"
                                            BorderColor="DarkGray"
                                            Margin="0"
                                            HorizontalOptions="Center"
-                                           Padding="0">
-                                        <Image Source="https://www.pngitem.com/pimgs/m/44-440455_transparent-background-fb-logo-hd-png-download.png"
+                                           Padding="3">
+                                        <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png"
                                                Aspect="AspectFill"
                                                Margin="0" />
                                     </Frame>
                                     <Frame BackgroundColor="White"
-                                           HeightRequest="45"
-                                           WidthRequest="45"
-                                           CornerRadius="45"
+                                           HeightRequest="40"
+                                           WidthRequest="40"
+                                           CornerRadius="40"
                                            HasShadow="False"
                                            BorderColor="DarkGray"
                                            Margin="0"
                                            HorizontalOptions="Center"
-                                           Padding="0">
-                                        <Image Source="https://blog.hubspot.com/hubfs/image8-2.jpg"
+                                           Padding="3">
+                                        <Image Source="Gg_logo.png"
                                                Aspect="AspectFill"
                                                Margin="0" />
                                     </Frame>

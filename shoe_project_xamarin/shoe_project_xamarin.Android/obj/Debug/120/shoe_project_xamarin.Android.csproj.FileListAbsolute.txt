@@ -1284,3 +1284,7 @@ D:\.NET\shoe-project\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug
 D:\.NET\shoe-project\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug\120\android\assets\shoe_project_xamarin.dll
 D:\.NET\shoe-project\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug\120\android\assets\shoe_project_xamarin.pdb
 D:\.NET\shoe-project\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug\120\android\src\crc644b2f2c2cf769dc23\CustomEntryRenderer.java
+D:\.NET\shoe-project\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug\120\res\drawable\eye_icon.png
+D:\.NET\shoe-project\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug\120\res\drawable\gg_logo.png
+D:\.NET\shoe-project\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug\120\res\drawable\fab_logo.png
+D:\.NET\shoe-project\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug\120\res\drawable\cseye_icon.png
