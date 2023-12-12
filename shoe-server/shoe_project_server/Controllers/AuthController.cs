@@ -41,13 +41,13 @@ namespace shoe_project_server.Controllers
             if (result.Succeeded)
             {
                 await _signInManager.SignInAsync(user, isPersistent: false);
-                return Ok(new {message="register successfully!", Token = GenerateToken(user) });
+                return Ok(new {userName=user.UserName , message="register successfully!", token = GenerateToken(user) });
             }
 
             var response = new
             {
-                Errors = result.Errors,
-                Message = "Registration failed"
+                errors = result.Errors,
+                message = "Registration failed"
             };
 
             return BadRequest(response);
@@ -69,13 +69,13 @@ namespace shoe_project_server.Controllers
             if (result.Succeeded)
             {
                 var user = await _userManager.FindByNameAsync(loginModel.userName);
-                return Ok(new {message="login successfully!", Token = GenerateToken(user) });
+                return Ok(new {userName= loginModel.userName, message="login successfully!", token = GenerateToken(user) });
             }
 
             var response = new
             {
-                Message = "Login failed",
-                Errors = new[] { "Invalid login attempt" }
+                message = "Login failed",
+                errors = new[] { "Invalid login attempt" }
             };
 
             return BadRequest(response);

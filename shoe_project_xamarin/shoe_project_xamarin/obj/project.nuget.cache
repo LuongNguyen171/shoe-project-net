@@ -1,14 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "aUAC8Ih8psW8DlWIXCxfJIX4JW+HPuDCUBJwq73rm6HIx0Rw6QQ++I/n0pp51s1zUhtXAc3FN3w4x51Qk4JwDw==",
+  "dgSpecHash": "uiwVf+S54FygsKadtsDCeEceNsmG959F8jnr0tmaYVjehG47rHuoYopfjWWpIR+xjlg84auBByAdYs8nDijIQw==",
   "success": true,
-  "projectFilePath": "D:\\Xamarin\\Shoes-Store\\shoe-project-net\\shoe_project_xamarin\\shoe_project_xamarin\\shoe_project_xamarin.csproj",
+  "projectFilePath": "D:\\.NET\\DoAn\\shoe-project\\shoe-project-net\\shoe_project_xamarin\\shoe_project_xamarin\\shoe_project_xamarin.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\trann\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\trann\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\trann\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\trann\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\trann\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\plugin.toast\\2.2.0\\plugin.toast.2.2.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
   ],
   "logs": []
 }

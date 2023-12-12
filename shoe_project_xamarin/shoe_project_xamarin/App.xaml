@@ -29,6 +29,18 @@
                     <local:Footer Grid.Row="2" />
                 </Grid>
             </ControlTemplate>
+            <ControlTemplate x:Key="OnlyContentLayout">
+
+                <Grid HorizontalOptions="Center"
+                      VerticalOptions="Center"
+                      Background="black">
+
+                    <ContentPresenter />
+
+
+
+                </Grid>
+            </ControlTemplate>
 
             <Style TargetType="Label">
                 <Setter Property="TextColor"

@@ -4,6 +4,9 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "shoe_project_xamarin.Android.dll" comes first in this list. */
 		"shoe_project_xamarin.Android.dll",
 		"FormsViewGroup.dll",
+		"Newtonsoft.Json.dll",
+		"Plugin.Toast.Abstractions.dll",
+		"Plugin.Toast.dll",
 		"shoe_project_xamarin.dll",
 		"Xamarin.AndroidX.Activity.dll",
 		"Xamarin.AndroidX.Annotation.dll",
