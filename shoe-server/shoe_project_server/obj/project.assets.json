@@ -2177,23 +2177,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\trann\\.nuget\\packages\\": {},
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Xamarin\\Shoes-Store\\shoe-project-net\\shoe-server\\shoe_project_server\\shoe_project_server.csproj",
+      "projectUniqueName": "D:\\.NET\\DoAn\\shoe-project\\shoe-project-net\\shoe-server\\shoe_project_server\\shoe_project_server.csproj",
       "projectName": "shoe_project_server",
-      "projectPath": "D:\\Xamarin\\Shoes-Store\\shoe-project-net\\shoe-server\\shoe_project_server\\shoe_project_server.csproj",
-      "packagesPath": "C:\\Users\\trann\\.nuget\\packages\\",
-      "outputPath": "D:\\Xamarin\\Shoes-Store\\shoe-project-net\\shoe-server\\shoe_project_server\\obj\\",
+      "projectPath": "D:\\.NET\\DoAn\\shoe-project\\shoe-project-net\\shoe-server\\shoe_project_server\\shoe_project_server.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\.NET\\DoAn\\shoe-project\\shoe-project-net\\shoe-server\\shoe_project_server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\trann\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2277,7 +2277,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

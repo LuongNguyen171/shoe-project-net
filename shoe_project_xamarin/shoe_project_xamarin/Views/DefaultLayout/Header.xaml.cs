@@ -1,4 +1,5 @@
-﻿using System;
+﻿using shoe_project_xamarin.Views.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,5 +17,14 @@ public partial class Header : ContentView
     {
         InitializeComponent();
     }
-}
+
+        private void IconUser_Tapped(object sender, EventArgs e)
+        {
+            Login loginPage = new Login();
+            NavigationPage navigationPage = new NavigationPage(loginPage);
+            App.Current.MainPage = navigationPage;
+        }
+
+       
+    }
 }

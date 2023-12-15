@@ -8,7 +8,6 @@ using Android.Views;
 using Android.Widget;
 using AndroidX.Core.Content;
 using Java.Lang;
-using shoe_project_xamarin;
 using shoe_project_xamarin.Droid;
 using System;
 using System.Collections.Generic;
@@ -16,7 +15,7 @@ using System.Linq;
 using System.Text;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
-
+using shoe_project_xamarin;
 
 [assembly: ExportRenderer(typeof(CustomPicker), typeof(CustomPickerRendererAndroid))]
 namespace shoe_project_xamarin.Droid

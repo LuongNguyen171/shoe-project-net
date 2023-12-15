@@ -11,8 +11,9 @@ namespace shoe_project_server.Models
         public int producerId { get; set; }
         [Required]
         public string productName { get; set; }
+       
         [Required]
-        public decimal productPrice { get; set; }
+        public double  productPrice { get; set; }
         public string productImage { get; set; }
         public string ProductDescribe { get; set; }
     }
