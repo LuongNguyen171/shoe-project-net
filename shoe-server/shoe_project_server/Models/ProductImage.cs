@@ -7,5 +7,6 @@ namespace shoe_project_server.Models
         [Key]
         public int productImageId { get; set; }
         public int producId { get; set; }
+        public string productImage { get; set; }
     }
 }
