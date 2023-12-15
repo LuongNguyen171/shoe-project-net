@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Acr.UserDialogs;
+using Newtonsoft.Json;
 using Plugin.Toast;
 using shoe_project_server.Models.HostConfig;
 using shoe_project_xamarin.Models;
@@ -29,6 +30,7 @@ namespace shoe_project_xamarin.Views.Pages
 
         async private void BtnLogin_Clicked(object sender, EventArgs e)
         {
+           
 
             string userName = EntryUserName.Text;
             string userPassword = EntryPassword.Text;
@@ -48,7 +50,12 @@ namespace shoe_project_xamarin.Views.Pages
                     string apiUrl = apiSettings.BuildApiClientHost("/auth/login");
 
                     var content = new StringContent(jsonLoginData, Encoding.UTF8, "application/json");
+
+                    UserDialogs.Instance.ShowLoading("Loading Please Wait...");
+
                     var response = await client.PostAsync(apiUrl, content);
+
+                    UserDialogs.Instance.HideLoading();
 
                     if (response != null)
                     {
@@ -58,14 +65,13 @@ namespace shoe_project_xamarin.Views.Pages
                             var loginSuccessResponse = JsonConvert.DeserializeObject<LoginSuccessResponse>(successContent);
                             string messageRes = loginSuccessResponse.message;
                             string userNameRes = loginSuccessResponse.userName;
-                            /* CrossToastPopUp.Current.ShowToastSuccess($"{messageRes} : welcome : {userNameRes}");*/
+                            string tokenRes = loginSuccessResponse.token;
 
-                            DisplayAlert("Thông báo!", $"{messageRes} : {userNameRes}", "OK");
+                           /* CrossToastPopUp.Current.ShowToastSuccess($"{messageRes} : welcome : {userNameRes}");*/
 
-                            MainPage mainPage = new MainPage();
-                            NavigationPage navigationPage = new NavigationPage(mainPage);
-                            App.Current.MainPage = navigationPage;
-
+                            DisplayAlert("Thông báo!", $"{userNameRes} : {tokenRes}", "OK");
+                           /* Navigation.PushAsync(new MainPage());*/
+                            _ = Shell.Current.GoToAsync("//main");
                         }
                         else
                         {

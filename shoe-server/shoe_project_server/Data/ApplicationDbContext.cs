@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using shoe_project_server.Data.Seeder;
 using shoe_project_server.Models;
 
 namespace shoe_project_server.Data
@@ -25,10 +26,13 @@ namespace shoe_project_server.Data
             modelBuilder.Entity<Favourite>()
               .HasKey(fa => new { fa.userId, fa.productId });
 
+            base.OnModelCreating(modelBuilder);
+            new DbInitializer(modelBuilder).Seed();
 
-          /*  modelBuilder.Entity<ApplicationUser>()
-           .HasIndex(u => u.Email)
-           .IsUnique();*/
+
+            /*  modelBuilder.Entity<ApplicationUser>()
+             .HasIndex(u => u.Email)
+             .IsUnique();*/
 
 
             base.OnModelCreating(modelBuilder);

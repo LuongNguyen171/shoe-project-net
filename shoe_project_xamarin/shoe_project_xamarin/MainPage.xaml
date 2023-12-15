@@ -3,7 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:shoe_project_xamarin.Views.Pages"
        x:Class="shoe_project_xamarin.MainPage">
-    
+
+    <ShellItem Route="login">
+        <ShellContent ContentTemplate="{DataTemplate views:Login}" />
+    </ShellItem>
+    <ShellItem Route="register">
+        <ShellContent ContentTemplate="{DataTemplate views:Register}" />
+    </ShellItem>
+
     <TabBar Route="main"
             Title="MySportShop">
         <ShellContent Title="Trang Chủ"

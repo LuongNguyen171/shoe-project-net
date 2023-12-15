@@ -118,3 +118,7 @@ D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xam
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\obj\Debug\netstandard2.0\XamlC.stamp
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\obj\Debug\netstandard2.0\ref\shoe_project_xamarin.dll
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\obj\Debug\netstandard2.0\Views\Pages\Register.xaml.g.cs
+D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\bin\Debug\netstandard2.0\Mono.Android.dll
+D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\bin\Debug\netstandard2.0\Mono.Android.pdb
+D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\bin\Debug\netstandard2.0\Mono.Android.xml
+D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\obj\Debug\netstandard2.0\shoe_project_xamarin.csproj.CopyComplete

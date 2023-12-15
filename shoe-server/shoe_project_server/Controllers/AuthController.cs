@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using shoe_project_server.Data;
 using shoe_project_server.Models.DTOs;
+using shoe_project_server.Services;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -16,15 +17,16 @@ namespace shoe_project_server.Controllers
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
-        private readonly IConfiguration _configuration;
+        private readonly ITokenService _tokenService;
 
-        public AuthController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IConfiguration configuration)
+        public AuthController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, ITokenService tokenService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
-            _configuration = configuration;
+            _tokenService = tokenService;
         }
 
+        //user register
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterModel userModel)
         {
@@ -41,7 +43,7 @@ namespace shoe_project_server.Controllers
             if (result.Succeeded)
             {
                 await _signInManager.SignInAsync(user, isPersistent: false);
-                return Ok(new {userName=user.UserName , message="register successfully!", token = GenerateToken(user) });
+                return Ok(new {userName=user.UserName , message="register successfully!", token = _tokenService.GenerateToken(user) });
             }
 
             var response = new
@@ -52,6 +54,7 @@ namespace shoe_project_server.Controllers
 
             return BadRequest(response);
         }
+        //user  login 
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
@@ -69,7 +72,7 @@ namespace shoe_project_server.Controllers
             if (result.Succeeded)
             {
                 var user = await _userManager.FindByNameAsync(loginModel.userName);
-                return Ok(new {userName= loginModel.userName, message="login successfully!", token = GenerateToken(user) });
+                return Ok(new {userName= loginModel.userName, message="login successfully!", token = _tokenService.GenerateToken(user) });
             }
 
             var response = new
@@ -80,28 +83,59 @@ namespace shoe_project_server.Controllers
 
             return BadRequest(response);
         }
-
-        private string GenerateToken(ApplicationUser user)
+        //get user information
+        [HttpGet("GetUserInfo")]
+       public  async Task<IActionResult> GetUserInfo()
         {
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
-            var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-            var claims = new[]
+            /*string authorizationHeader = Request.Headers["Authorization"];
+                if (string.IsNullOrEmpty(authorizationHeader) || !authorizationHeader.StartsWith("Bearer "))
+                {
+                    return BadRequest("Invalid authorization header");
+                }
+                string token = authorizationHeader.Substring("Bearer ".Length);
+                var principal = _tokenService.VerifyTokenAsync(token).Result;
+            return Ok(new
             {
-                new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-             };
+                principal = principal,
+               
+            });*/
 
-            var token = new JwtSecurityToken(
-                issuer: _configuration["Jwt:Issuer"],
-                audience: _configuration["Jwt:Audience"],
-                claims: claims,
-                expires: DateTime.UtcNow.AddHours(1),
-                signingCredentials: credentials
-            );
+            try
+            {
+                string authorizationHeader = Request.Headers["Authorization"];
+                if (string.IsNullOrEmpty(authorizationHeader) || !authorizationHeader.StartsWith("Bearer "))
+                {
+                    return BadRequest("Invalid authorization header");
+                }
+                string token = authorizationHeader.Substring("Bearer ".Length);
+                var principal = _tokenService.VerifyTokenAsync(token).Result;
 
-            return new JwtSecurityTokenHandler().WriteToken(token);
+
+                var Id = principal.FindFirst("sub")?.Value;
+
+                return Ok(new { principal = principal });
+                if (Id != null)
+                {
+                    var user = await _userManager.FindByIdAsync(Id);
+
+                    return Ok(new
+                    {
+                        UserName = user.UserName,
+                        Email = user.Email,
+                    });
+                }
+                else
+                {
+                    return BadRequest("Invalid token: User Id not found");
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Invalid token :{ex.Message}");
+            }
         }
+
 
     }
 }
