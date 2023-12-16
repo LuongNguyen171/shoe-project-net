@@ -1,20 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "iDPP1u/tU/nJlHlViKapy3QIYWBBFpzDHqlkH4wNeZCGaPy7uNYQBblVqgPy2pFe5j7hl//wnIRxGDRgVXfmKA==",
+  "dgSpecHash": "lDMH+OjY/wcwNQG1vSyJJpQdgxdTxDx4F5PFGIPIzHFir1t8GNiYiOgfSs/YAEWS2SGHtlzNNex9gyza2xLHkg==",
   "success": true,
-  "projectFilePath": "D:\\.NET\\DoAn\\shoe-project\\shoe-project-net\\shoe_project_xamarin\\shoe_project_xamarin\\shoe_project_xamarin.csproj",
+  "projectFilePath": "D:\\UIT\\.NET\\shoe-project-net\\shoe_project_xamarin\\shoe_project_xamarin\\shoe_project_xamarin.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Admin\\.nuget\\packages\\acr.userdialogs\\7.2.0.564\\acr.userdialogs.7.2.0.564.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\plugin.toast\\2.2.0\\plugin.toast.2.2.0.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\syncfusion.licensing\\23.2.7\\syncfusion.licensing.23.2.7.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\syncfusion.xamarin.core\\23.2.7\\syncfusion.xamarin.core.23.2.7.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\syncfusion.xamarin.sfrating\\23.2.7\\syncfusion.xamarin.sfrating.23.2.7.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+    "C:\\Users\\MSI_\\.nuget\\packages\\acr.userdialogs\\7.2.0.564\\acr.userdialogs.7.2.0.564.nupkg.sha512",
+    "C:\\Users\\MSI_\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\MSI_\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\MSI_\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\MSI_\\.nuget\\packages\\plugin.toast\\2.2.0\\plugin.toast.2.2.0.nupkg.sha512",
+    "C:\\Users\\MSI_\\.nuget\\packages\\syncfusion.licensing\\23.2.7\\syncfusion.licensing.23.2.7.nupkg.sha512",
+    "C:\\Users\\MSI_\\.nuget\\packages\\syncfusion.xamarin.core\\23.2.7\\syncfusion.xamarin.core.23.2.7.nupkg.sha512",
+    "C:\\Users\\MSI_\\.nuget\\packages\\syncfusion.xamarin.sfrating\\23.2.7\\syncfusion.xamarin.sfrating.23.2.7.nupkg.sha512",
+    "C:\\Users\\MSI_\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\MSI_\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\MSI_\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
   ],
   "logs": []
 }
