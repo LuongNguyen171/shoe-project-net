@@ -4,9 +4,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using shoe_project_server.Data;
 using shoe_project_server.Models.DTOs;
+using shoe_project_server.Services;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using System.Text.Json.Serialization;
+using System.Text.Json;
+using Newtonsoft.Json.Linq;
 
 namespace shoe_project_server.Controllers
 {
@@ -16,15 +20,16 @@ namespace shoe_project_server.Controllers
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
-        private readonly IConfiguration _configuration;
+        private readonly ITokenService _tokenService;
 
-        public AuthController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IConfiguration configuration)
+        public AuthController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, ITokenService tokenService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
-            _configuration = configuration;
+            _tokenService = tokenService;
         }
 
+        //user register
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterModel userModel)
         {
@@ -41,7 +46,7 @@ namespace shoe_project_server.Controllers
             if (result.Succeeded)
             {
                 await _signInManager.SignInAsync(user, isPersistent: false);
-                return Ok(new {userName=user.UserName , message="register successfully!", token = GenerateToken(user) });
+                return Ok(new {userName=user.UserName , message="register successfully!", token = _tokenService.GenerateToken(user) });
             }
 
             var response = new
@@ -52,6 +57,7 @@ namespace shoe_project_server.Controllers
 
             return BadRequest(response);
         }
+        //user  login 
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
@@ -69,7 +75,7 @@ namespace shoe_project_server.Controllers
             if (result.Succeeded)
             {
                 var user = await _userManager.FindByNameAsync(loginModel.userName);
-                return Ok(new {userName= loginModel.userName, message="login successfully!", token = GenerateToken(user) });
+                return Ok(new {userName= loginModel.userName,userId=user.Id, message="login successfully!", token = _tokenService.GenerateToken(user) });
             }
 
             var response = new
@@ -80,28 +86,47 @@ namespace shoe_project_server.Controllers
 
             return BadRequest(response);
         }
+        //get user information
 
-        private string GenerateToken(ApplicationUser user)
+        [HttpGet("GetUserInfo")]
+        public async Task<IActionResult> GetUserInfo()
         {
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
-            var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
-            var claims = new[]
+            try
             {
-                new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-             };
+                string authorizationHeader = Request.Headers["Authorization"];
+                if (string.IsNullOrEmpty(authorizationHeader) || !authorizationHeader.StartsWith("Bearer "))
+                {
+                    return BadRequest("Invalid authorization header");
+                }
+                string token = authorizationHeader.Substring("Bearer ".Length);
+                var principal = await _tokenService.VerifyTokenAsync(token);
 
-            var token = new JwtSecurityToken(
-                issuer: _configuration["Jwt:Issuer"],
-                audience: _configuration["Jwt:Audience"],
-                claims: claims,
-                expires: DateTime.UtcNow.AddHours(1),
-                signingCredentials: credentials
-            );
 
-            return new JwtSecurityTokenHandler().WriteToken(token);
+                    var jsonOptions = new JsonSerializerOptions
+                    {
+                        ReferenceHandler = ReferenceHandler.Preserve
+                    };
+
+                    var principalJson = JsonSerializer.Serialize(principal, jsonOptions);
+                    var jsonObject = JObject.Parse(principalJson);
+                    var id = jsonObject["Claims"]?["$values"]?.FirstOrDefault(c => c["Type"]?.ToString() == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier")?["Value"]?.ToString();
+                    var user = await _userManager.FindByIdAsync(id);
+
+                    return Ok(new
+                    {
+                         id= id,
+                         userName = user.UserName,
+                         userEmail = user.Email,
+                    });
+              
         }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex}");
+                return BadRequest($"Invalid token: {ex.Message}");
+            }
+        }
+
 
     }
 }

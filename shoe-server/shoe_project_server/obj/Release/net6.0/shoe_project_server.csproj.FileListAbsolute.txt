@@ -69,3 +69,4 @@ D:\.NET\DoAn\shoe-project\shoe-project-net\shoe-server\shoe_project_server\obj\R
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe-server\shoe_project_server\obj\Release\net6.0\shoe_project_server.pdb
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe-server\shoe_project_server\obj\Release\net6.0\shoe_project_server.genruntimeconfig.cache
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe-server\shoe_project_server\obj\Release\net6.0\ref\shoe_project_server.dll
+D:\.NET\DoAn\shoe-project\shoe-project-net\shoe-server\shoe_project_server\bin\Release\net6.0\Newtonsoft.Json.dll

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Acr.UserDialogs;
+using Newtonsoft.Json;
 using Plugin.Toast;
 using shoe_project_server.Models.HostConfig;
 using shoe_project_xamarin.Models;
@@ -10,7 +11,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -29,12 +30,11 @@ namespace shoe_project_xamarin.Views.Pages
 
         async private void BtnLogin_Clicked(object sender, EventArgs e)
         {
-
             string userName = EntryUserName.Text;
             string userPassword = EntryPassword.Text;
+
             try
             {
-
                 var loginData = new
                 {
                     userName = userName,
@@ -48,7 +48,12 @@ namespace shoe_project_xamarin.Views.Pages
                     string apiUrl = apiSettings.BuildApiClientHost("/auth/login");
 
                     var content = new StringContent(jsonLoginData, Encoding.UTF8, "application/json");
+
+                    UserDialogs.Instance.ShowLoading("Loading Please Wait...");
+
                     var response = await client.PostAsync(apiUrl, content);
+
+                    UserDialogs.Instance.HideLoading();
 
                     if (response != null)
                     {
@@ -58,14 +63,16 @@ namespace shoe_project_xamarin.Views.Pages
                             var loginSuccessResponse = JsonConvert.DeserializeObject<LoginSuccessResponse>(successContent);
                             string messageRes = loginSuccessResponse.message;
                             string userNameRes = loginSuccessResponse.userName;
-                            /* CrossToastPopUp.Current.ShowToastSuccess($"{messageRes} : welcome : {userNameRes}");*/
+                            string userIdRes = loginSuccessResponse.userId;
+                            string tokenRes = loginSuccessResponse.token;
 
-                            DisplayAlert("Thông báo!", $"{messageRes} : {userNameRes}", "OK");
+                            SecureStorage.SetAsync("AccessToken", tokenRes);
+                            SecureStorage.SetAsync("UserId", userIdRes);
 
-                            MainPage mainPage = new MainPage();
-                            NavigationPage navigationPage = new NavigationPage(mainPage);
-                            App.Current.MainPage = navigationPage;
+                            CrossToastPopUp.Current.ShowToastSuccess($"{messageRes}");
 
+                            _ = Shell.Current.GoToAsync("//main");
+                            return;
                         }
                         else
                         {
@@ -75,27 +82,28 @@ namespace shoe_project_xamarin.Views.Pages
                             string errorDescription = errorResponse.errors?.FirstOrDefault();
 
                             CrossToastPopUp.Current.ShowToastError($"{errorMessage}: {errorDescription}");
+                            return;
                         }
                     }
                     else
                     {
                         CrossToastPopUp.Current.ShowToastError("Login failed! Response is empty.");
+                        return;
                     }
                 }
             }
             catch (Exception ex)
             {
                 CrossToastPopUp.Current.ShowToastError($"Login failed: {ex.Message}");
+                return;
             }
-
         }
+
 
 
         private async void LabelSignUp_Tapped(object sender, EventArgs e)
         {
-            Register register = new Register();
-            NavigationPage navigationPage = new NavigationPage(register);
-            App.Current.MainPage = navigationPage;
+            _ = Shell.Current.GoToAsync("//register");
         }
 
         private void EyePassword_Tapped(object sender, EventArgs e)

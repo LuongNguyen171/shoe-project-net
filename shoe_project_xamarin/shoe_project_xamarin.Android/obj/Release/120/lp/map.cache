@@ -103,3 +103,8 @@ androidx.legacy.legacy-support-core-ui.aar
 androidx.legacy.legacy-support-v4.aar
 androidx.browser.browser.aar
 Plugin.Toast.dll
+Acr.UserDialogs.dll
+AndHUD.dll
+Syncfusion.Core.XForms.Android.dll
+Syncfusion.SfRating.Android.dll
+Syncfusion.SfRating.XForms.Android.dll

@@ -12,8 +12,14 @@
                         <Image Source="avatar.jpg" Aspect="AspectFill"/>
                     </Frame>
                 </StackLayout>
-                <Label Text="USERNAME" HorizontalOptions="Center" FontAttributes="Bold" FontSize="22"/>
-                <Label Text="10 April, 2017" HorizontalOptions="Center"/>
+                <Label x:Name="lblUserName"
+                       HorizontalOptions="Center"
+                       FontAttributes="Bold"
+                       Text="Không có dữ liệu!"
+                       FontSize="22" />
+                <Label x:Name="lblEmail"
+                       Text="Không có dữ liệu!"
+                       HorizontalOptions="Center" />
                 <!--Shipping Order-->
                 <StackLayout Margin="0,20,0,0">
                     <Label Text="Đơn hàng đang giao" Margin="10,0,0,0" FontAttributes="Bold" FontSize="20"/>

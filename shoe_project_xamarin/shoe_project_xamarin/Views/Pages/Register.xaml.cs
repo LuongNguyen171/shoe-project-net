@@ -13,6 +13,7 @@ using Plugin.Toast;
 using Newtonsoft.Json.Serialization;
 using shoe_project_server.Models.HostConfig;
 using shoe_project_xamarin.Models.DTOs.Auth;
+using Acr.UserDialogs;
 
 namespace shoe_project_xamarin.Views.Pages
 {
@@ -59,8 +60,10 @@ namespace shoe_project_xamarin.Views.Pages
                         string apiUrl = apiSettings.BuildApiClientHost("/auth/register");
 
                         var content = new StringContent(jsonRegisterData, Encoding.UTF8, "application/json");
-                        var response = await client.PostAsync(apiUrl, content);
 
+                        UserDialogs.Instance.ShowLoading("Loading Please Wait...");
+                        var response = await client.PostAsync(apiUrl, content);
+                        UserDialogs.Instance.HideLoading();
                         if (response != null)
                         {
                             if (response.IsSuccessStatusCode)
@@ -69,9 +72,10 @@ namespace shoe_project_xamarin.Views.Pages
                                 var registerSuccessResponse = JsonConvert.DeserializeObject<RegisterSuccessResponse>(successContent);
                                 string messageRes = registerSuccessResponse.message;
                                 string userNameRes = registerSuccessResponse.userName;
-                                CrossToastPopUp.Current.ShowToastSuccess($"{messageRes} : welcome : {userNameRes}");
-
-                                await Navigation.PushAsync(new MainPage());
+                                CrossToastPopUp.Current.ShowToastSuccess($"{messageRes}");
+                               
+                                _ = Shell.Current.GoToAsync("//login");
+                                return;
                             }
                             else
                             {
@@ -80,11 +84,13 @@ namespace shoe_project_xamarin.Views.Pages
                                 string messageRes = registerErrorResponse.message;
                                 string descriptionRes = registerErrorResponse.errors?.FirstOrDefault()?.Description;
                                 CrossToastPopUp.Current.ShowToastError($"{messageRes} :{descriptionRes}");
+                                return;
                             }
                         }
                         else
                         {
                             CrossToastPopUp.Current.ShowToastError("Registration failed! Response is empty.");
+                            return;
 
                         }
                     }
@@ -92,11 +98,13 @@ namespace shoe_project_xamarin.Views.Pages
                 else
                 {
                     CrossToastPopUp.Current.ShowToastError("input cannot be empty!");
+                    return;
                 }
             }
             catch (Exception ex)
             {
                 CrossToastPopUp.Current.ShowToastError("connection errors!");
+                return;
             }
         }
 
