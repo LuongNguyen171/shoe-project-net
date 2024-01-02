@@ -13,7 +13,7 @@ namespace shoe_project_server.Data
         /*public DbSet<User> users { get; set; }*/
         public DbSet<Product> products { get; set; }
         public DbSet<Favourite> favourites { get; set; }
-        public DbSet<Order> orders { get; set; }
+       public DbSet<Order> orders { get; set; }
         public DbSet<Producer> producers { get; set; }
         public DbSet<ProductDetail> productDetails { get; set; }
         public DbSet<ProductImage> productImages { get; set; }

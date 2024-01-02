@@ -3347,3 +3347,6 @@ D:\UIT\.NET\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\o
 D:\UIT\.NET\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug\120\stamp\_GenerateJavaStubs.stamp
 D:\UIT\.NET\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug\120\stamp\_GeneratePackageManagerJava.stamp
 D:\UIT\.NET\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug\120\stamp\_ResolveLibraryProjectImports.stamp
+D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug\120\android\assets\Dapper.dll
+D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug\120\android\assets\System.Reflection.Emit.ILGeneration.dll
+D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug\120\android\assets\System.Reflection.Emit.Lightweight.dll

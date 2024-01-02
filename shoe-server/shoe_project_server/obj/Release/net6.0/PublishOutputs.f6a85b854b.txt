@@ -30,6 +30,7 @@ D:\.NET\DoAn\shoe-project\shoe-project-net\shoe-server\shoe_project_server\obj\R
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe-server\shoe_project_server\obj\Release\net6.0\PubTmp\Out\Microsoft.OpenApi.dll
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe-server\shoe_project_server\obj\Release\net6.0\PubTmp\Out\Microsoft.Win32.SystemEvents.dll
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe-server\shoe_project_server\obj\Release\net6.0\PubTmp\Out\MySqlConnector.dll
+D:\.NET\DoAn\shoe-project\shoe-project-net\shoe-server\shoe_project_server\obj\Release\net6.0\PubTmp\Out\Newtonsoft.Json.dll
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe-server\shoe_project_server\obj\Release\net6.0\PubTmp\Out\Pomelo.EntityFrameworkCore.MySql.dll
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe-server\shoe_project_server\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe-server\shoe_project_server\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll

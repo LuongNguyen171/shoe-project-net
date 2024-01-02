@@ -5,6 +5,7 @@ public class MonoPackageManager_Resources {
 		"shoe_project_xamarin.Android.dll",
 		"Acr.UserDialogs.dll",
 		"AndHUD.dll",
+		"Dapper.dll",
 		"FormsViewGroup.dll",
 		"Newtonsoft.Json.dll",
 		"Plugin.Toast.Abstractions.dll",

@@ -20,9 +20,11 @@ public partial class Header : ContentView
 
         private void IconUser_Tapped(object sender, EventArgs e)
         {
-            Login loginPage = new Login();
-            NavigationPage navigationPage = new NavigationPage(loginPage);
-            App.Current.MainPage = navigationPage;
+            /* Login loginPage = new Login();
+             NavigationPage navigationPage = new NavigationPage(loginPage);
+             App.Current.MainPage = navigationPage;*/
+
+            _ = Shell.Current.GoToAsync("//login");
         }
 
        

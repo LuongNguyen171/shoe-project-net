@@ -233,6 +233,10 @@ namespace shoe_project_server.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<string>("customerId")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<string>("customerPhone")
                         .IsRequired()
                         .HasColumnType("longtext");

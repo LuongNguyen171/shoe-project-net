@@ -352,3 +352,4 @@ D:\UIT\.NET\shoe-project-net\shoe-server\shoe_project_server\obj\Debug\net6.0\re
 D:\UIT\.NET\shoe-project-net\shoe-server\shoe_project_server\obj\Debug\net6.0\shoe_project_server.pdb
 D:\UIT\.NET\shoe-project-net\shoe-server\shoe_project_server\obj\Debug\net6.0\shoe_project_server.genruntimeconfig.cache
 D:\UIT\.NET\shoe-project-net\shoe-server\shoe_project_server\obj\Debug\net6.0\ref\shoe_project_server.dll
+D:\.NET\DoAn\shoe-project\shoe-project-net\shoe-server\shoe_project_server\bin\Debug\net6.0\Newtonsoft.Json.dll
