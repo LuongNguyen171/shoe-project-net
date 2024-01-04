@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("shoe_project_server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b08b62646969ad7a3ed289b83336e5ebf5be3cd1")]
 [assembly: System.Reflection.AssemblyProductAttribute("shoe_project_server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("shoe_project_server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

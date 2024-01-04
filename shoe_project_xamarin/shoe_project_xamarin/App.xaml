@@ -8,6 +8,31 @@
     -->
     <Application.Resources>
         <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:String" x:Key="PlayfairBold">
+                <On Platform="Android" Value="PlayfairDisplay-Bold.ttf#Playfair Display Bold" />
+                <On Platform="iOS" Value="PlayfairDisplay-Bold" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="PlayfairNormal">
+                <On Platform="Android" Value="PlayfairDisplay-Regular.ttf#Playfair Display Regular" />
+                <On Platform="iOS" Value="PlayfairDisplay-Regular" />
+            </OnPlatform>
+
+            <OnPlatform x:TypeArguments="x:String" x:Key="BoldFont">
+                <On Platform="Android" Value="Roboto-Bold.ttf#Roboto Bold" />
+                <On Platform="iOS" Value="Roboto-Bold" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="NormalFont">
+                <On Platform="Android" Value="Roboto-Regular.ttf#Roboto" />
+                <On Platform="iOS" Value="Roboto-Regular" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ThinFont">
+                <On Platform="Android" Value="Roboto-Thin.ttf#Roboto Thin" />
+                <On Platform="iOS" Value="Roboto-Thin" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="LightFont">
+                <On Platform="Android" Value="Roboto-Light.ttf#Roboto Light" />
+                <On Platform="iOS" Value="Roboto-Light" />
+            </OnPlatform>
             <ControlTemplate x:Key="DefaultLayout">
                 <Grid>
                     <Grid.RowDefinitions>

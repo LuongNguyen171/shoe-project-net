@@ -2,14 +2,10 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:shoe_project_xamarin.Views.Pages"
-       x:Class="shoe_project_xamarin.MainPage">
+       x:Class="shoe_project_xamarin.MainPage"
+       Shell.NavBarIsVisible="False">
 
-    <ShellItem Route="login">
-        <ShellContent ContentTemplate="{DataTemplate views:Login}" />
-    </ShellItem>
-    <ShellItem Route="register">
-        <ShellContent ContentTemplate="{DataTemplate views:Register}" />
-    </ShellItem>
+    
 
     <TabBar Route="main"
             Title="MySportShop">
@@ -20,13 +16,20 @@
        
         <ShellContent Title="Sản Phẩm"
                       Icon="CartIcon.png"
-                      ContentTemplate="{DataTemplate views:ProductDetail}"></ShellContent>
+                      ContentTemplate="{DataTemplate views:Products}"></ShellContent>
        
         <ShellContent Title="Giỏ hàng"
-                      Icon="UserIcon.png"
+                      Icon="CartIcon.png"
                       ContentTemplate="{DataTemplate views:Cart}"></ShellContent>
         <ShellContent Title="Tài khoản"
                       Icon="UserIcon.png"
                       ContentTemplate="{DataTemplate views:Account}"></ShellContent>
     </TabBar>
+
+    <ShellItem Route="login">
+        <ShellContent ContentTemplate="{DataTemplate views:Login}" />
+    </ShellItem>
+    <ShellItem Route="register">
+        <ShellContent ContentTemplate="{DataTemplate views:Register}" />
+    </ShellItem>
 </Shell>

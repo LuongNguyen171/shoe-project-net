@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("shoe_project_xamarin")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+475dba5c4a6bb8bbd86a7f38943e59b13f4ac80e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("shoe_project_xamarin")]
 [assembly: System.Reflection.AssemblyTitleAttribute("shoe_project_xamarin")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

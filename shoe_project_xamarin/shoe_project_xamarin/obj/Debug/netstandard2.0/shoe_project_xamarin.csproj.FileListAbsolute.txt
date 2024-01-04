@@ -152,3 +152,4 @@ D:\UIT\.NET\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\obj\Debug
 D:\UIT\.NET\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\obj\Debug\netstandard2.0\refint\shoe_project_xamarin.dll
 D:\UIT\.NET\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\obj\Debug\netstandard2.0\shoe_project_xamarin.pdb
 D:\UIT\.NET\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\obj\Debug\netstandard2.0\ref\shoe_project_xamarin.dll
+D:\UIT\.NET\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\obj\Debug\netstandard2.0\Views\Pages\Products.xaml.g.cs
