@@ -10,6 +10,7 @@ public class MonoPackageManager_Resources {
 		"Newtonsoft.Json.dll",
 		"Plugin.Toast.Abstractions.dll",
 		"Plugin.Toast.dll",
+		"Rg.Plugins.Popup.dll",
 		"shoe_project_xamarin.dll",
 		"Syncfusion.Core.XForms.Android.dll",
 		"Syncfusion.Core.XForms.dll",

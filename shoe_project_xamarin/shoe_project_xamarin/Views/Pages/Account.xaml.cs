@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using shoe_project_xamarin.Models;
 using System;
+using System.Globalization;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -13,6 +14,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using shoe_project_server.Models.HostConfig;
 using shoe_project_xamarin.Models.DTOs.Order;
+using static Android.Resource;
 
 namespace shoe_project_xamarin.Views.Pages
 {
@@ -27,13 +29,13 @@ namespace shoe_project_xamarin.Views.Pages
             GetUserInfor();
             GetOrdersByCustomerIdAsync();
 
-           /* List<Order> orders = new List<Order>()
-            {
-                new Order() {orderId = 1, orderStatus = "Hoàn thành", orderDate = new DateTime(), deliveryDate  = new DateTime(), customerPhone = "123456"},
-                new Order() {orderId = 2, orderStatus = "Đang giao", orderDate = new DateTime(), deliveryDate  = new DateTime(), customerPhone = "123456"},
-                new Order() {orderId = 3, orderStatus = "Đang giao", orderDate = new DateTime(), deliveryDate  = new DateTime(), customerPhone = "123456"},
-            };
-            HistoryOrder.ItemsSource = orders;*/
+            List<Order> orders = new List<Order>()
+             {
+                 new Order() {orderId = 1, orderStatus = "Hoàn thành", orderDate = new DateTime(2024, 1, 3), deliveryDate  = new DateTime(2024, 1, 3), customerPhone = "123456"},
+                 new Order() {orderId = 2, orderStatus = "Đang giao", orderDate = new DateTime(2024, 1, 3), deliveryDate  = new DateTime(2024, 1, 3), customerPhone = "123456"},
+                 new Order() {orderId = 3, orderStatus = "Đang giao", orderDate = new DateTime(2024, 1, 3), deliveryDate  = new DateTime(2024, 1, 3), customerPhone = "123456"},
+             };
+            HistoryOrder.ItemsSource = orders;
 
             List<Product> products = new List<Product>()
             {
@@ -43,7 +45,6 @@ namespace shoe_project_xamarin.Views.Pages
             };
             shippingOrder.ItemsSource = products;
         }
-
         private async void GetUserInfor()
         {
             try

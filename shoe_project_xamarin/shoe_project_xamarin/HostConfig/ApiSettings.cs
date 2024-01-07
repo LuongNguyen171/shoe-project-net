@@ -8,8 +8,8 @@
 
     public class ApiSettings : IApiSettings
     {
-        private string BaseClientHost = "http://192.168.43.182";
-        private string ApiClientHost = "http://192.168.43.182/shoestore/api";
+        private string BaseClientHost = "http://192.168.14.146";
+        private string ApiClientHost = "http://192.168.14.146/shoestore/api";
 
         public string BuildApiBaseClientHost(string endpoint)
         {

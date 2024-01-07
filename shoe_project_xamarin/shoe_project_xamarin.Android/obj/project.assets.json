@@ -86,6 +86,25 @@
           }
         }
       },
+      "Rg.Plugins.Popup/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid10.0/Rg.Plugins.Popup.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/monoandroid10.0/Rg.Plugins.Popup.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Syncfusion.Licensing/23.2.7": {
         "type": "package",
         "compile": {
@@ -1929,6 +1948,7 @@
           "Acr.UserDialogs": "7.2.0.564",
           "Newtonsoft.Json": "13.0.3",
           "Plugin.Toast": "2.2.0",
+          "Rg.Plugins.Popup": "2.1.0",
           "Syncfusion.Xamarin.SfRating": "23.2.7",
           "Xamarin.Essentials": "1.7.0",
           "Xamarin.Forms": "5.0.0.2196"
@@ -2067,6 +2087,51 @@
         "lib/netstandard/Plugin.Toast.pdb",
         "plugin.toast.2.2.0.nupkg.sha512",
         "plugin.toast.nuspec"
+      ]
+    },
+    "Rg.Plugins.Popup/2.1.0": {
+      "sha512": "caKjkvimzpUqk4pO/WSFn3uOX43uZNW5rPWCx7eXkOlGG9Br90MTwNVS1nxhtyypB69uUe/0GQPEC3rz+kscbA==",
+      "type": "package",
+      "path": "rg.plugins.popup/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "icon.png",
+        "lib/monoandroid10.0/Rg.Plugins.Popup.dll",
+        "lib/monoandroid10.0/Rg.Plugins.Popup.pdb",
+        "lib/monoandroid10.0/Rg.Plugins.Popup.xml",
+        "lib/net472/Rg.Plugins.Popup.dll",
+        "lib/net472/Rg.Plugins.Popup.pdb",
+        "lib/net472/Rg.Plugins.Popup.xml",
+        "lib/netcoreapp3.1/Rg.Plugins.Popup.dll",
+        "lib/netcoreapp3.1/Rg.Plugins.Popup.pdb",
+        "lib/netcoreapp3.1/Rg.Plugins.Popup.xml",
+        "lib/netstandard2.0/Rg.Plugins.Popup.dll",
+        "lib/netstandard2.0/Rg.Plugins.Popup.pdb",
+        "lib/netstandard2.0/Rg.Plugins.Popup.xml",
+        "lib/tizen80/Rg.Plugins.Popup.dll",
+        "lib/tizen80/Rg.Plugins.Popup.pdb",
+        "lib/tizen80/Rg.Plugins.Popup.xml",
+        "lib/uap10.0.18362/Rg.Plugins.Popup.dll",
+        "lib/uap10.0.18362/Rg.Plugins.Popup.pdb",
+        "lib/uap10.0.18362/Rg.Plugins.Popup.pri",
+        "lib/uap10.0.18362/Rg.Plugins.Popup.xml",
+        "lib/xamarinios10/Rg.Plugins.Popup.dll",
+        "lib/xamarinios10/Rg.Plugins.Popup.pdb",
+        "lib/xamarinios10/Rg.Plugins.Popup.xml",
+        "lib/xamarinmac20/Rg.Plugins.Popup.dll",
+        "lib/xamarinmac20/Rg.Plugins.Popup.pdb",
+        "lib/xamarinmac20/Rg.Plugins.Popup.xml",
+        "lib/xamarintvos10/Rg.Plugins.Popup.dll",
+        "lib/xamarintvos10/Rg.Plugins.Popup.pdb",
+        "lib/xamarintvos10/Rg.Plugins.Popup.xml",
+        "lib/xamarinwatchos10/Rg.Plugins.Popup.dll",
+        "lib/xamarinwatchos10/Rg.Plugins.Popup.pdb",
+        "lib/xamarinwatchos10/Rg.Plugins.Popup.xml",
+        "readme.txt",
+        "rg.plugins.popup.2.1.0.nupkg.sha512",
+        "rg.plugins.popup.nuspec"
       ]
     },
     "Syncfusion.Licensing/23.2.7": {
@@ -3824,30 +3889,31 @@
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v12.0": [
       "Dapper >= 2.1.24",
+      "Rg.Plugins.Popup >= 2.1.0",
       "Xamarin.Essentials >= 1.7.0",
       "Xamarin.Forms >= 5.0.0.2196",
       "shoe_project_xamarin >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Users\\trann\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\.NET\\DoAn\\shoe-project\\shoe-project-net\\shoe_project_xamarin\\shoe_project_xamarin.Android\\shoe_project_xamarin.Android.csproj",
+      "projectUniqueName": "D:\\Xamarin\\ShoeStoreApp\\shoe-project-net\\shoe_project_xamarin\\shoe_project_xamarin.Android\\shoe_project_xamarin.Android.csproj",
       "projectName": "shoe_project_xamarin.Android",
-      "projectPath": "D:\\.NET\\DoAn\\shoe-project\\shoe-project-net\\shoe_project_xamarin\\shoe_project_xamarin.Android\\shoe_project_xamarin.Android.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\.NET\\DoAn\\shoe-project\\shoe-project-net\\shoe_project_xamarin\\shoe_project_xamarin.Android\\obj\\",
+      "projectPath": "D:\\Xamarin\\ShoeStoreApp\\shoe-project-net\\shoe_project_xamarin\\shoe_project_xamarin.Android\\shoe_project_xamarin.Android.csproj",
+      "packagesPath": "C:\\Users\\trann\\.nuget\\packages\\",
+      "outputPath": "D:\\Xamarin\\ShoeStoreApp\\shoe-project-net\\shoe_project_xamarin\\shoe_project_xamarin.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\trann\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3861,8 +3927,8 @@
       "frameworks": {
         "monoandroid12.0": {
           "projectReferences": {
-            "D:\\.NET\\DoAn\\shoe-project\\shoe-project-net\\shoe_project_xamarin\\shoe_project_xamarin\\shoe_project_xamarin.csproj": {
-              "projectPath": "D:\\.NET\\DoAn\\shoe-project\\shoe-project-net\\shoe_project_xamarin\\shoe_project_xamarin\\shoe_project_xamarin.csproj"
+            "D:\\Xamarin\\ShoeStoreApp\\shoe-project-net\\shoe_project_xamarin\\shoe_project_xamarin\\shoe_project_xamarin.csproj": {
+              "projectPath": "D:\\Xamarin\\ShoeStoreApp\\shoe-project-net\\shoe_project_xamarin\\shoe_project_xamarin\\shoe_project_xamarin.csproj"
             }
           }
         }
@@ -3874,6 +3940,10 @@
           "Dapper": {
             "target": "Package",
             "version": "[2.1.24, )"
+          },
+          "Rg.Plugins.Popup": {
+            "target": "Package",
+            "version": "[2.1.0, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",

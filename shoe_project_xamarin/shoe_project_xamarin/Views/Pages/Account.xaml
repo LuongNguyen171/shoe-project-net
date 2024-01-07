@@ -6,11 +6,21 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Spacing="0">
-                 <!--Avatar--> 
-                <StackLayout WidthRequest="150" HeightRequest="150" HorizontalOptions="CenterAndExpand" Margin="0,20,0,20" Spacing="0">
-                    <Frame WidthRequest="150" HeightRequest="150" CornerRadius="75" Padding="0" BackgroundColor="Transparent">
+                <!--Avatar-->
+                <StackLayout HorizontalOptions="EndAndExpand" Margin="0,20,0,20" Spacing="0" Orientation="Horizontal">
+                    <Frame WidthRequest="150" HeightRequest="150" CornerRadius="75" Padding="0" BackgroundColor="Transparent" Margin="0,0,30,0">
                         <Image Source="avatar.jpg" Aspect="AspectFill"/>
                     </Frame>
+                    <Button 
+                        Text="Sign out" 
+                        BackgroundColor="#3498DB" 
+                        TextColor="White" 
+                        Padding="10" 
+                        CornerRadius="10"
+                        VerticalOptions="Start"
+                        HorizontalOptions="End"
+                        Margin="0,0,20,0"
+                        />
                 </StackLayout>
                 <Label x:Name="lblUserName"
                        HorizontalOptions="Center"
@@ -21,7 +31,7 @@
                        Text="Không có dữ liệu!"
                        HorizontalOptions="Center" />
                 <!--Shipping Order-->
-                <StackLayout Margin="0,20,0,0">
+                <StackLayout Margin="0,20,0,0" HeightRequest="400">
                     <Label Text="Đơn hàng đang giao" Margin="10,0,0,0" FontAttributes="Bold" FontSize="20"/>
 
                     <Frame Margin="10,0,10,0" HeightRequest="300">
@@ -32,7 +42,10 @@
                                     <DataTemplate>
                                         <ViewCell>
                                             <StackLayout HorizontalOptions="FillAndExpand" WidthRequest="400">
-                                                <Label Text="{Binding productId}" FontSize="20" FontAttributes="Bold"/>
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Label Text="ID: " FontSize="20" FontAttributes="Bold"/>
+                                                    <Label Text="{Binding productId}" FontSize="20" FontAttributes="Bold"/>
+                                                </StackLayout>
                                                 <StackLayout Orientation="Horizontal" Margin="0,0,0,20">
                                                     <Image Source="{Binding productImage}"
                                                             WidthRequest="{OnPlatform iOS=20, Android=100}"
@@ -65,7 +78,7 @@
                                                                 <Label Text="3" TextColor="Gray"/>
                                                             </StackLayout>
                                                         </StackLayout>
-                                                        <Label Text="{Binding productPrice}" FontAttributes="Bold"/>
+                                                        <Label Text="{Binding productPrice}" FontAttributes="Bold" x:Name="priceProduct"/>
                                                     </StackLayout>
                                                 </StackLayout>
                                                 <BoxView HeightRequest="1" Color="Black" HorizontalOptions="FillAndExpand"/>
@@ -77,8 +90,8 @@
                         </StackLayout>
                     </Frame>
                 </StackLayout>
-                 <!--Order History-->
-                <StackLayout Margin="0,20,0,0">
+                <!--Order History-->
+                <StackLayout Margin="0,20,0,0" HeightRequest="290">
                     <Label Text="Lịch sử đặt hàng" Margin="10,0,0,0" FontAttributes="Bold" FontSize="20"/>
                     <Frame Margin="10,0,10,0" WidthRequest="300">
                         <StackLayout>
@@ -90,14 +103,14 @@
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="25" />
+                                    <RowDefinition Height="30" />
                                 </Grid.RowDefinitions>
                                 <Label Grid.Column="0" Text="Mã đơn" FontAttributes="Bold"/>
                                 <Label Grid.Column="1" Text="Trạng thái" FontAttributes="Bold"/>
                                 <Label Grid.Column="2" Text="Ngày đặt" FontAttributes="Bold"/>
                                 <Label Grid.Column="3" Text="Ngày giao" FontAttributes="Bold"/>
                             </Grid>
-                            <ListView x:Name="HistoryOrder" HasUnevenRows="true" HeightRequest="200" SeparatorVisibility="None">
+                            <ListView x:Name="HistoryOrder" HasUnevenRows="true" SeparatorVisibility="None">
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <ViewCell>
@@ -112,8 +125,8 @@
                                                         </Grid.ColumnDefinitions>
                                                         <Label Grid.Column="0" Margin="0" Text="{Binding orderId}" VerticalTextAlignment="Center"/>
                                                         <Label Grid.Column="1" Margin="0" Text="{Binding orderStatus}" VerticalOptions="Center"/>
-                                                        <Label Grid.Column="2" Margin="0" Text="{Binding orderDate}" VerticalOptions="Center"/>
-                                                        <Label Grid.Column="3" Margin="0" Text="{Binding deliveryDate}" VerticalOptions="Center"/>
+                                                        <Label Grid.Column="2" Margin="0" Text="{Binding orderDate, StringFormat='{0:dd/MM/yyyy}'}" VerticalOptions="Center" x:Name="orderDateText"/>
+                                                        <Label Grid.Column="3" Margin="0" Text="{Binding deliveryDate, StringFormat='{0:dd/MM/yyyy}'}" VerticalOptions="Center"/>
                                                     </Grid>
                                                 </StackLayout>
                                             </ViewCell.View>
@@ -124,6 +137,7 @@
                         </StackLayout>
                     </Frame>
                 </StackLayout>
+                
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
