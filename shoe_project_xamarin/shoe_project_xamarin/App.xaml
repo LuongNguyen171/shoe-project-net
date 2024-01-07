@@ -14,19 +14,21 @@
                         <RowDefinition Height="Auto" />
                         <!-- Header -->
                         <RowDefinition Height="*" />
-                        <!-- Content -->
-                        <RowDefinition Height="Auto" />
-                        <!-- Footer -->
+                     
                     </Grid.RowDefinitions>
-
                     <!-- Header -->
                     <local:Header Grid.Row="0" />
 
-                    <!-- Content -->
-                    <ContentPresenter Grid.Row="1" />
+                    <ScrollView Grid.Row="1">
+                        <StackLayout>
+                            <!-- Content -->
+                          <ContentPresenter  />
+                            <!-- Footer -->
+                            <local:Footer />
+                        </StackLayout>
+                    </ScrollView>
 
-                    <!-- Footer -->
-                    <local:Footer Grid.Row="2" />
+
                 </Grid>
             </ControlTemplate>
             <ControlTemplate x:Key="OnlyContentLayout">

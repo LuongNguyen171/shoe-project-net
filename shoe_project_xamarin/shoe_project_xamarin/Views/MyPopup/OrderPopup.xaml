@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms"
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           xmlns:xct="clr-namespace:Xamarin.CommunityToolkit.UI.Views;assembly=Xamarin.CommunityToolkit"
+           Size="1500,1000"
+           x:Class="shoe_project_xamarin.Views.MyPopup.OrderPopup">
+    <StackLayout Padding="10">
+
+        <!-- Order Items -->
+        <Label Text="Order Items"
+               FontAttributes="Bold"
+               FontSize="20"
+               Margin="0,10,0,5" />
+
+        <ListView x:Name="OrderItemsListView"
+                  HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding ProductName}"
+                                   FontAttributes="Bold" />
+                            <Label Text="{Binding Quantity}" />
+                            <Label Text="{Binding TotalPrice, StringFormat='Total: {0:C}'}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Entry Placeholder="Name"
+               x:Name="NameEntry"
+               Margin="0,0,0,10" />
+        <Entry Placeholder="Address"
+               x:Name="AddressEntry"
+               Margin="0,0,0,20" />
+
+
+        <!-- User Information -->
+        <Label Text="User Information"
+               FontAttributes="Bold"
+               FontSize="20"
+               Margin="0,20,0,5" />
+     
+        <!-- Submit Button -->
+        <Button Text="Place Order"
+                Clicked="OnPlaceOrderClicked"
+                BackgroundColor="Black"
+                TextColor="White"
+                CornerRadius="50" />
+
+    </StackLayout>
+
+</xct:Popup>

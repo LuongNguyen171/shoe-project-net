@@ -6,7 +6,7 @@
              ControlTemplate="{StaticResource DefaultLayout}">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Spacing="0" Padding="0,10,0,20" HeightRequest="200">
+            <StackLayout Spacing="0" Padding="0,10,0,20" >
                 <ScrollView>
                     <StackLayout>
                     <Image Source="shoeimg.jpg" WidthRequest="300" HeightRequest="200" Margin="0,0,0,10" x:Name="ImageSample"/>

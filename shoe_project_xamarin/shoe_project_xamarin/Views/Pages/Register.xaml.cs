@@ -29,10 +29,9 @@ namespace shoe_project_xamarin.Views.Pages
         }
         private void LabelSignIn_Tapped(object sender, EventArgs e)
         {
-            Login loginPage = new Login();
-            NavigationPage navigationPage = new NavigationPage(loginPage);
-            App.Current.MainPage = navigationPage;
-
+            UserDialogs.Instance.ShowLoading("Loading Please Wait...");
+            Navigation.PushModalAsync(new Login());
+            UserDialogs.Instance.HideLoading();
         }
 
         private async void BtnRegister_Clicked(object sender, EventArgs e)
@@ -73,8 +72,10 @@ namespace shoe_project_xamarin.Views.Pages
                                 string messageRes = registerSuccessResponse.message;
                                 string userNameRes = registerSuccessResponse.userName;
                                 CrossToastPopUp.Current.ShowToastSuccess($"{messageRes}");
-                               
-                                _ = Shell.Current.GoToAsync("//login");
+
+                                UserDialogs.Instance.ShowLoading("Loading Please Wait...");
+                                await Navigation.PushModalAsync(new Login());
+                                UserDialogs.Instance.HideLoading();
                                 return;
                             }
                             else

@@ -16,5 +16,7 @@ namespace shoe_project_xamarin.Views.Pages
         {
             InitializeComponent();
         }
+
+      
     }
 }
