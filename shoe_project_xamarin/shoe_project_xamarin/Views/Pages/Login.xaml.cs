@@ -66,12 +66,13 @@ namespace shoe_project_xamarin.Views.Pages
                             string userIdRes = loginSuccessResponse.userId;
                             string tokenRes = loginSuccessResponse.token;
 
-                            SecureStorage.SetAsync("AccessToken", tokenRes);
-                            SecureStorage.SetAsync("UserId", userIdRes);
+                            await SecureStorage.SetAsync("AccessToken", tokenRes);
+                            await SecureStorage.SetAsync("UserId", userIdRes);
 
                             CrossToastPopUp.Current.ShowToastSuccess($"{messageRes}");
+                            App.Current.MainPage = new MainPage();
 
-                            _ = Shell.Current.GoToAsync("//main");
+
                             return;
                         }
                         else
@@ -103,7 +104,7 @@ namespace shoe_project_xamarin.Views.Pages
 
         private async void LabelSignUp_Tapped(object sender, EventArgs e)
         {
-            _ = Shell.Current.GoToAsync("//register");
+            Navigation.PushModalAsync(new Register());
         }
 
         private void EyePassword_Tapped(object sender, EventArgs e)

@@ -4,8 +4,11 @@
              x:Class="shoe_project_xamarin.Views.Pages.Account"
              >
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout Spacing="0">
+        <ScrollView >
+            <StackLayout>
+                
+            <StackLayout Spacing="0"
+                         x:Name="mainContentLayout">
                  <!--Avatar--> 
                 <StackLayout WidthRequest="150" HeightRequest="150" HorizontalOptions="CenterAndExpand" Margin="0,20,0,20" Spacing="0">
                     <Frame WidthRequest="150" HeightRequest="150" CornerRadius="75" Padding="0" BackgroundColor="Transparent">
@@ -97,7 +100,11 @@
                                 <Label Grid.Column="2" Text="Ngày đặt" FontAttributes="Bold"/>
                                 <Label Grid.Column="3" Text="Ngày giao" FontAttributes="Bold"/>
                             </Grid>
-                            <ListView x:Name="HistoryOrder" HasUnevenRows="true" HeightRequest="200" SeparatorVisibility="None">
+                            <ListView x:Name="HistoryOrder"
+                                      HasUnevenRows="true"
+                                      HeightRequest="200"
+                                      SeparatorVisibility="None"
+                                      ItemTapped="OnHistoryOrderItemTapped">
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <ViewCell>
@@ -111,8 +118,26 @@
                                                             <ColumnDefinition Width="*" />
                                                         </Grid.ColumnDefinitions>
                                                         <Label Grid.Column="0" Margin="0" Text="{Binding orderId}" VerticalTextAlignment="Center"/>
-                                                        <Label Grid.Column="1" Margin="0" Text="{Binding orderStatus}" VerticalOptions="Center"/>
-                                                        <Label Grid.Column="2" Margin="0" Text="{Binding orderDate}" VerticalOptions="Center"/>
+                                                            <Label Grid.Column="1"
+                                                                   Margin="0"
+                                                                   Text="{Binding orderStatus}"
+                                                                   VerticalOptions="Center">
+                                                                <Label.Triggers>
+                                                                    <DataTrigger TargetType="Label"
+                                                                                 Binding="{Binding orderStatus}"
+                                                                                 Value="Processing">
+                                                                        <Setter Property="TextColor"
+                                                                                Value="Green" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger TargetType="Label"
+                                                                                 Binding="{Binding orderStatus}"
+                                                                                 Value="Delivered">
+                                                                        <Setter Property="TextColor"
+                                                                                Value="Red" />
+                                                                    </DataTrigger>
+                                                                </Label.Triggers>
+                                                            </Label>
+                                                            <Label Grid.Column="2" Margin="0" Text="{Binding orderDate}" VerticalOptions="Center"/>
                                                         <Label Grid.Column="3" Margin="0" Text="{Binding deliveryDate}" VerticalOptions="Center"/>
                                                     </Grid>
                                                 </StackLayout>
@@ -124,6 +149,16 @@
                         </StackLayout>
                     </Frame>
                 </StackLayout>
+                    <Button Text="Log out" x:Name="logout_btn" Clicked="logout_btn_Clicked"></Button>
+            </StackLayout>
+                <StackLayout x:Name="noDataLabel"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center">
+
+                    <Image Source="https://kaqa.org.sa/Style%20Library/KAQA/Design/assets/images/nodata.png"></Image>
+
+                </StackLayout>
+
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

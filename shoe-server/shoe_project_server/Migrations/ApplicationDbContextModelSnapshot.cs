@@ -481,8 +481,8 @@ namespace shoe_project_server.Migrations
                     b.Property<int>("orderId")
                         .HasColumnType("int");
 
-                    b.Property<int>("userId")
-                        .HasColumnType("int");
+                    b.Property<string>("userId")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<int>("productId")
                         .HasColumnType("int");
@@ -490,7 +490,9 @@ namespace shoe_project_server.Migrations
                     b.Property<int>("productQuantity")
                         .HasColumnType("int");
 
-                    b.HasKey("orderId", "userId");
+                    b.HasKey("orderId", "userId", "productId");
+
+                    b.HasIndex("productId");
 
                     b.ToTable("purchaseHistories");
                 });
@@ -544,6 +546,17 @@ namespace shoe_project_server.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("shoe_project_server.Models.PurchaseHistory", b =>
+                {
+                    b.HasOne("shoe_project_server.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("productId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Product");
                 });
 #pragma warning restore 612, 618
         }

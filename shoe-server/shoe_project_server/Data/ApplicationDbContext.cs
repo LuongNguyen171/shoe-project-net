@@ -22,7 +22,14 @@ namespace shoe_project_server.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<PurchaseHistory>()
-                .HasKey(ph => new { ph.orderId, ph.userId });
+                .HasKey(ph => new { ph.orderId, ph.userId,ph.productId });
+
+            modelBuilder.Entity<PurchaseHistory>()
+           .HasOne(ph => ph.Product)    
+           .WithMany()
+           .HasForeignKey(ph => ph.productId)
+           .OnDelete(DeleteBehavior.Restrict);  
+
             modelBuilder.Entity<Favourite>()
               .HasKey(fa => new { fa.userId, fa.productId });
 

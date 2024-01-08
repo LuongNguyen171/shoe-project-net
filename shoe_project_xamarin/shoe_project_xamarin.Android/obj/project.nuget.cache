@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "S9qKomppNTTgu5Ui/tyUucI4qGPYZksTmcJ7xY21KzSvQCvNP99xHpX/WW76TnHah/y3u/Ouf2lWR9qXaU1o+w==",
+  "dgSpecHash": "Lc90vzp2o4GtraEUgz5a+2xWHNc/bypTzavVSfm2WA0WykYaMoJJgDbJ1kRvGu9RpEAc14HlPMFZY9Tjh+Ho7g==",
   "success": true,
   "projectFilePath": "D:\\.NET\\DoAn\\shoe-project\\shoe-project-net\\shoe_project_xamarin\\shoe_project_xamarin.Android\\shoe_project_xamarin.Android.csproj",
   "expectedPackageFiles": [
@@ -67,6 +67,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\xamarin.androidx.versionedparcelable\\1.1.1.10\\xamarin.androidx.versionedparcelable.1.1.1.10.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\xamarin.androidx.viewpager\\1.0.0.10\\xamarin.androidx.viewpager.1.0.0.10.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\xamarin.androidx.viewpager2\\1.0.0.12\\xamarin.androidx.viewpager2.1.0.0.12.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\xamarin.communitytoolkit\\1.3.2\\xamarin.communitytoolkit.1.3.2.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\xamarin.google.android.material\\1.4.0.4\\xamarin.google.android.material.1.4.0.4.nupkg.sha512",
