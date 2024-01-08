@@ -9,6 +9,7 @@ D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xam
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\obj\Release\netstandard2.0\App.xaml.g.cs
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\obj\Release\netstandard2.0\AppShell.xaml.g.cs
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\obj\Release\netstandard2.0\MainPage.xaml.g.cs
+D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\obj\Release\netstandard2.0\PopupCheckout.xaml.g.cs
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\obj\Release\netstandard2.0\Views\DefaultLayout\Footer.xaml.g.cs
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\obj\Release\netstandard2.0\Views\DefaultLayout\Header.xaml.g.cs
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\obj\Release\netstandard2.0\Views\Pages\Account.xaml.g.cs
