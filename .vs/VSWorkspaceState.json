@@ -1,12 +1,15 @@
 {
   "ExpandedNodes": [
     "",
+    "\\shoe-server",
+    "\\shoe-server\\shoe_project_server",
+    "\\shoe-server\\shoe_project_server\\Controllers",
+    "\\shoe-server\\shoe_project_server\\Models",
     "\\shoe_project_xamarin",
     "\\shoe_project_xamarin\\shoe_project_xamarin",
-    "\\shoe_project_xamarin\\shoe_project_xamarin\\Views",
     "\\shoe_project_xamarin\\shoe_project_xamarin\\Views\\DefaultLayout",
     "\\shoe_project_xamarin\\shoe_project_xamarin\\Views\\Pages"
   ],
-  "SelectedNode": "\\shoe-project.sln",
+  "SelectedNode": "\\shoe-server\\shoe_project_server\\Models\\Order.cs",
   "PreviewInSolutionExplorer": false
 }
