@@ -11,13 +11,13 @@
                 <StackLayout>
                     <cv:CarouselViewControl x:Name="cvBanners" ShowIndicators="true" IndicatorsShape="Circle" IndicatorsTintColor="LightGray"
                                             CurrentPageIndicatorTintColor="Red" Orientation="Horizontal" InterPageSpacing="0" 
-                                            HeightRequest="200" ItemsSource="{Binding Banners}" HorizontalOptions="FillAndExpand" 
+                                            HeightRequest="250" ItemsSource="{Binding Banners}" HorizontalOptions="FillAndExpand" 
                                             VerticalOptions="StartAndExpand" AnimateTransition="True">
                         <cv:CarouselViewControl.ItemTemplate>
                             <DataTemplate>
                                 <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                                     <Image Source="{Binding Image}" Aspect="Fill" HorizontalOptions="FillAndExpand"/>
-                                    <StackLayout Margin="30,10,0,0" Spacing="10" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                                    <StackLayout Margin="30,50,0,0" Spacing="10" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
                                         <Label Text="{Binding Heading}" TextColor="White" FontSize="12" FontFamily="{StaticResource ThinFont}"/>
                                         <BoxView BackgroundColor="White" HorizontalOptions="Start" VerticalOptions="Start" HeightRequest="1" WidthRequest="50"/>
                                         <StackLayout>
@@ -45,15 +45,18 @@
                             <Label Text="New Product" TextColor="Black" FontSize="20" FontFamily="{StaticResource BoldFont}"/>
                             <Label Text="Show all" TextColor="Black" FontSize="14" VerticalOptions="Center" Opacity="0.5" HorizontalOptions="End" Margin="0,0,30,0"/>
                             <ScrollView Orientation="Horizontal" Grid.Row="1" VerticalOptions="Start" VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
-                                <StackLayout BindableLayout.ItemsSource="{Binding NewProductList}" Orientation="Horizontal" Spacing="20" VerticalOptions="Start">
+                                <StackLayout Orientation="Horizontal" BindableLayout.ItemsSource="{Binding NewProductList}" Spacing="15" VerticalOptions="Start">
                                     <BindableLayout.ItemTemplate>
                                         <DataTemplate>
                                             <StackLayout VerticalOptions="Start">
+                                                <StackLayout.GestureRecognizers>
+                                                    
+                                                </StackLayout.GestureRecognizers>
                                                 <Frame Padding="0" HasShadow="False"  HorizontalOptions="Start" VerticalOptions="Start" CornerRadius="10" HeightRequest="150" WidthRequest="150">
                                                     <Image Source="{Binding productImage}" Aspect="Fill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
                                                 </Frame>
                                                 <Label Text="{Binding productName}" TextColor="Black" FontSize="15" />
-                                                <Label Text="{Binding productPrice}" Margin="0,-7,0,0" TextColor="#62153B" FontSize="12" FontFamily="{StaticResource BoldFont}"/>
+                                                <Label Text="{Binding productPrice, StringFormat='{0:0,0 vnđ}'}" Margin="0,-7,0,0" TextColor="#62153B" FontSize="12" FontFamily="{StaticResource BoldFont}"/>
                                             </StackLayout>
                                         </DataTemplate>
                                     </BindableLayout.ItemTemplate>
@@ -77,7 +80,7 @@
                                                 </Frame>
                                                 <StackLayout Margin="0,12,0,0">
                                                     <Label Text="{Binding productName}" TextColor="Black" FontSize="15" />
-                                                    <Label Text="{Binding productPrice}" Margin="0,-7,0,0" TextColor="#62153B" FontSize="12" FontFamily="{StaticResource BoldFont}"/>
+                                                    <Label Text="{Binding productPrice, StringFormat='{0:0,0 vnđ}'}" Margin="0,-7,0,0" TextColor="#62153B" FontSize="12" FontFamily="{StaticResource BoldFont}"/>
                                                     <StackLayout Orientation="Horizontal" Margin="0,15,0,0">
                                                         <Image Source="icon_add.png" Aspect="Fill" VerticalOptions="Center" WidthRequest="15" HeightRequest="15"/>
                                                         <Label Text="ADD TO CART" TextColor="Black" FontSize="10" Opacity="0.6" VerticalOptions="Center"/>
