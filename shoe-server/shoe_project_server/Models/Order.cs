@@ -12,5 +12,6 @@ namespace shoe_project_server.Models
         public DateTime orderDate { get; set; }
         public DateTime deliveryDate { get; set; }
         public string customerPhone { get; set; }
+        public string customerId { get; set; }
     }
 }

@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Rg.Plugins.Popup.Services;
 using shoe_project_xamarin.Models;
-
+using shoe_project_xamarin.Views.MyPopup;
+using Xamarin.CommunityToolkit.Extensions;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -26,6 +28,10 @@ namespace shoe_project_xamarin.Views.Pages
             };
 
             listImg.ItemsSource = products;
+        }
+        private async void ShowPopupCheckout(object sender, EventArgs e)
+        {
+            await PopupNavigation.Instance.PushAsync(new PopupCheckout());
         }
     }
 }

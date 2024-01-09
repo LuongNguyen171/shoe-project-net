@@ -7,6 +7,7 @@ namespace shoe_project_xamarin.Models
     {
       
         public int orderId { get; set; }
+        public string customerId { get; set; }
         public string orderStatus { get; set; }
         public DateTime orderDate { get; set; }
         public DateTime deliveryDate { get; set; }

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms"
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           xmlns:xct="clr-namespace:Xamarin.CommunityToolkit.UI.Views;assembly=Xamarin.CommunityToolkit"
+           Size="300,400"
+           x:Class="shoe_project_xamarin.Views.MyPopup.OrderPlacedDetailPopup">
+
+    <StackLayout >
+        <Label x:Name="PaymentInvoiceLabel"
+              FontSize="Body"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="0,10,0,10" />
+        <Frame 
+               Padding="5"
+               WidthRequest="100">
+
+        <ListView x:Name="OrderItemsListView"
+                  HasUnevenRows="True"
+                      WidthRequest="100">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Column="0"
+                                   Source="{Binding productImage}"
+                                   Aspect="AspectFit"
+                                   HeightRequest="80" />
+
+                            <StackLayout Grid.Column="1"
+                                         Spacing="5">
+                                <Label Text="{Binding productPrice, StringFormat='Price: {0:C}'}"
+                                       />
+
+                                <Label Text="{Binding productQuantity, StringFormat='Quantity: {0}'}" />
+
+
+                                <Label Text="{Binding totalPrice, StringFormat='Total: {0:C}'}"
+                                       FontAttributes="Bold" TextColor="Red"/>
+                            </StackLayout>
+                        </Grid>
+
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        </Frame>
+
+        <Button Text="Close"
+                Clicked="OnCloseButtonClicked"
+                TextColor="White"
+                WidthRequest="50"
+                BackgroundColor="#1da1f2"/>
+    </StackLayout>
+   
+
+</xct:Popup>

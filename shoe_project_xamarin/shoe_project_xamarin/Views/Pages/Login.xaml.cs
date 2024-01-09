@@ -11,7 +11,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -30,13 +30,11 @@ namespace shoe_project_xamarin.Views.Pages
 
         async private void BtnLogin_Clicked(object sender, EventArgs e)
         {
-           
-
             string userName = EntryUserName.Text;
             string userPassword = EntryPassword.Text;
+
             try
             {
-
                 var loginData = new
                 {
                     userName = userName,
@@ -65,13 +63,17 @@ namespace shoe_project_xamarin.Views.Pages
                             var loginSuccessResponse = JsonConvert.DeserializeObject<LoginSuccessResponse>(successContent);
                             string messageRes = loginSuccessResponse.message;
                             string userNameRes = loginSuccessResponse.userName;
+                            string userIdRes = loginSuccessResponse.userId;
                             string tokenRes = loginSuccessResponse.token;
 
-                           /* CrossToastPopUp.Current.ShowToastSuccess($"{messageRes} : welcome : {userNameRes}");*/
+                            await SecureStorage.SetAsync("AccessToken", tokenRes);
+                            await SecureStorage.SetAsync("UserId", userIdRes);
 
-                            DisplayAlert("Thông báo!", $"{userNameRes} : {tokenRes}", "OK");
-                           /* Navigation.PushAsync(new MainPage());*/
-                            _ = Shell.Current.GoToAsync("//main");
+                            CrossToastPopUp.Current.ShowToastSuccess($"{messageRes}");
+                            App.Current.MainPage = new MainPage();
+
+
+                            return;
                         }
                         else
                         {
@@ -81,27 +83,28 @@ namespace shoe_project_xamarin.Views.Pages
                             string errorDescription = errorResponse.errors?.FirstOrDefault();
 
                             CrossToastPopUp.Current.ShowToastError($"{errorMessage}: {errorDescription}");
+                            return;
                         }
                     }
                     else
                     {
                         CrossToastPopUp.Current.ShowToastError("Login failed! Response is empty.");
+                        return;
                     }
                 }
             }
             catch (Exception ex)
             {
                 CrossToastPopUp.Current.ShowToastError($"Login failed: {ex.Message}");
+                return;
             }
-
         }
+
 
 
         private async void LabelSignUp_Tapped(object sender, EventArgs e)
         {
-            Register register = new Register();
-            NavigationPage navigationPage = new NavigationPage(register);
-            App.Current.MainPage = navigationPage;
+            Navigation.PushModalAsync(new Register());
         }
 
         private void EyePassword_Tapped(object sender, EventArgs e)

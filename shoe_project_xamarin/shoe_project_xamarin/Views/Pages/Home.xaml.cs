@@ -83,5 +83,7 @@ namespace shoe_project_xamarin.Views.Pages
             public string Caption { get; set; }
             public string Image { get; set; }
         }
+
+      
     }
 }

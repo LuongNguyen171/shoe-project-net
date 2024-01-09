@@ -8,6 +8,9 @@ using shoe_project_server.Services;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using System.Text.Json.Serialization;
+using System.Text.Json;
+using Newtonsoft.Json.Linq;
 
 namespace shoe_project_server.Controllers
 {
@@ -72,7 +75,7 @@ namespace shoe_project_server.Controllers
             if (result.Succeeded)
             {
                 var user = await _userManager.FindByNameAsync(loginModel.userName);
-                return Ok(new {userName= loginModel.userName, message="login successfully!", token = _tokenService.GenerateToken(user) });
+                return Ok(new {userName= loginModel.userName,userId=user.Id, message="login successfully!", token = _tokenService.GenerateToken(user) });
             }
 
             var response = new
@@ -84,23 +87,10 @@ namespace shoe_project_server.Controllers
             return BadRequest(response);
         }
         //get user information
+
         [HttpGet("GetUserInfo")]
-       public  async Task<IActionResult> GetUserInfo()
+        public async Task<IActionResult> GetUserInfo()
         {
-
-            /*string authorizationHeader = Request.Headers["Authorization"];
-                if (string.IsNullOrEmpty(authorizationHeader) || !authorizationHeader.StartsWith("Bearer "))
-                {
-                    return BadRequest("Invalid authorization header");
-                }
-                string token = authorizationHeader.Substring("Bearer ".Length);
-                var principal = _tokenService.VerifyTokenAsync(token).Result;
-            return Ok(new
-            {
-                principal = principal,
-               
-            });*/
-
             try
             {
                 string authorizationHeader = Request.Headers["Authorization"];
@@ -109,30 +99,31 @@ namespace shoe_project_server.Controllers
                     return BadRequest("Invalid authorization header");
                 }
                 string token = authorizationHeader.Substring("Bearer ".Length);
-                var principal = _tokenService.VerifyTokenAsync(token).Result;
+                var principal = await _tokenService.VerifyTokenAsync(token);
 
 
-                var Id = principal.FindFirst("sub")?.Value;
+                    var jsonOptions = new JsonSerializerOptions
+                    {
+                        ReferenceHandler = ReferenceHandler.Preserve
+                    };
 
-                return Ok(new { principal = principal });
-                if (Id != null)
-                {
-                    var user = await _userManager.FindByIdAsync(Id);
+                    var principalJson = JsonSerializer.Serialize(principal, jsonOptions);
+                    var jsonObject = JObject.Parse(principalJson);
+                    var id = jsonObject["Claims"]?["$values"]?.FirstOrDefault(c => c["Type"]?.ToString() == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier")?["Value"]?.ToString();
+                    var user = await _userManager.FindByIdAsync(id);
 
                     return Ok(new
                     {
-                        UserName = user.UserName,
-                        Email = user.Email,
+                         id= id,
+                         userName = user.UserName,
+                         userEmail = user.Email,
                     });
-                }
-                else
-                {
-                    return BadRequest("Invalid token: User Id not found");
-                }
-            }
+              
+        }
             catch (Exception ex)
             {
-                return BadRequest($"Invalid token :{ex.Message}");
+                Console.WriteLine($"Exception: {ex}");
+                return BadRequest($"Invalid token: {ex.Message}");
             }
         }
 
