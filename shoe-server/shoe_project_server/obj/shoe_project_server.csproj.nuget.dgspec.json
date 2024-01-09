@@ -89,6 +89,10 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "Rg.Plugins.Popup": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
