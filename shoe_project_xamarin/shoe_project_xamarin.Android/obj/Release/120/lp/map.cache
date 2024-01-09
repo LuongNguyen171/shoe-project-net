@@ -2,6 +2,7 @@ Acr.UserDialogs.dll
 AndHUD.dll
 FormsViewGroup.dll
 Plugin.Toast.dll
+Rg.Plugins.Popup.dll
 Syncfusion.Core.XForms.Android.dll
 Syncfusion.SfRating.Android.dll
 Syncfusion.SfRating.XForms.Android.dll
@@ -109,4 +110,3 @@ androidx.asynclayoutinflater.asynclayoutinflater.aar
 androidx.legacy.legacy-support-core-ui.aar
 androidx.legacy.legacy-support-v4.aar
 androidx.browser.browser.aar
-Rg.Plugins.Popup.dll

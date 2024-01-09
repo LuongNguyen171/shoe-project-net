@@ -46,6 +46,10 @@
               "target": "Package",
               "version": "[2.1.24, )"
             },
+            "Rg.Plugins.Popup": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.7.0, )"
@@ -101,7 +105,7 @@
           "dependencies": {
             "Acr.UserDialogs": {
               "target": "Package",
-              "version": "[7.2.0.564, )"
+              "version": "[7.2.0.562, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -116,6 +120,10 @@
             "Plugin.Toast": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "Rg.Plugins.Popup": {
+              "target": "Package",
+              "version": "[2.1.0, )"
             },
             "Syncfusion.Xamarin.SfRating": {
               "target": "Package",

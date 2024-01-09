@@ -49,7 +49,7 @@ namespace shoe_project_xamarin.Views.Pages
         //get user infor
         private async void GetUserInfor()
         {
-           string accessToken = SecureStorage.GetAsync("AccessToken").Result;
+            string accessToken = SecureStorage.GetAsync("AccessToken").Result;
             try
             {
 
@@ -157,7 +157,7 @@ namespace shoe_project_xamarin.Views.Pages
         }
         //get order detail
 
-        private  async Task<OrderDetail> GetOrderDetailAsync(int orderId)
+        private async Task<OrderDetail> GetOrderDetailAsync(int orderId)
         {
             try
             {
@@ -200,7 +200,7 @@ namespace shoe_project_xamarin.Views.Pages
             {
                 int orderId = selectedOrder.orderId;
 
-                 HandleShowPopup(orderId);
+                HandleShowPopup(orderId);
             }
 
             ((ListView)sender).SelectedItem = null;
@@ -213,7 +213,7 @@ namespace shoe_project_xamarin.Views.Pages
                 OrderDetail orderDetails = await GetOrderDetailAsync(orderId);
                 if (orderDetails != null)
                 {
-                    Navigation.ShowPopup(new OrderPlacedDetailPopup(orderDetails.productDetails,orderDetails.paymentInvoice));
+                    Navigation.ShowPopup(new OrderPlacedDetailPopup(orderDetails.productDetails, orderDetails.paymentInvoice));
                 }
                 else
                 {
@@ -224,8 +224,8 @@ namespace shoe_project_xamarin.Views.Pages
             {
                 Console.WriteLine($"An error occurred: {ex.Message}");
             }
-          
-  
+
+
         }
 
         private void logout_btn_Clicked(object sender, EventArgs e)

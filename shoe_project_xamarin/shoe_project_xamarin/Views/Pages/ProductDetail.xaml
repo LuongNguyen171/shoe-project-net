@@ -38,7 +38,7 @@
                                     <Frame BorderColor="Black" CornerRadius="5" Padding="5" WidthRequest="80">
                                         <local:CustomPicker 
                                             x:Name="myPickerSize" 
-                                            Title=" " 
+                                            Title="Size"
                                             TitleColor="Black" 
                                             TextColor="Black"
                                             FontSize="Small" 
@@ -63,6 +63,8 @@
                                     <Stepper x:Name="quantityStepper" Minimum="0" Increment="1" Value="0" HorizontalOptions="Start" HeightRequest="35"/>
                                 </StackLayout>
                             </StackLayout>
+
+                            <Label Text="Nothing as fly, nothing as comfortable, nothing as proven. This special edition Nike Air Max 90 stays true to its running roots with an iconic Waffle sole, stitched overlays and classic moulded plastic details. The earthy but neutral colours celebrate your fresh look, while Max Air cushioning adds comfort to the journey." Margin="10,0,10,0"/>
 
                             <Button Text="Add to bag" BackgroundColor="Black" TextColor="White" Margin="30,20,30,0"></Button>
 
