@@ -17,6 +17,7 @@ D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xam
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\obj\Release\netstandard2.0\Views\Pages\Login.xaml.g.cs
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\obj\Release\netstandard2.0\Views\Pages\News.xaml.g.cs
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\obj\Release\netstandard2.0\Views\Pages\ProductDetail.xaml.g.cs
+D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\obj\Release\netstandard2.0\Views\Pages\Products.xaml.g.cs
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\obj\Release\netstandard2.0\Views\Pages\Register.xaml.g.cs
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\obj\Release\netstandard2.0\shoe_project_xamarin.AssemblyInfoInputs.cache
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin\obj\Release\netstandard2.0\shoe_project_xamarin.AssemblyInfo.cs
