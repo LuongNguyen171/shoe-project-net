@@ -3,7 +3,6 @@ AndHUD.dll
 FormsViewGroup.dll
 Plugin.Toast.dll
 Rg.Plugins.Popup.dll
-shoe_project_xamarin.dll
 Syncfusion.Core.XForms.Android.dll
 Syncfusion.SfRating.Android.dll
 Syncfusion.SfRating.XForms.Android.dll
@@ -59,6 +58,7 @@ Xamarin.AndroidX.VectorDrawable.dll
 Xamarin.AndroidX.VersionedParcelable.dll
 Xamarin.AndroidX.ViewPager.dll
 Xamarin.AndroidX.ViewPager2.dll
+Xamarin.CommunityToolkit.dll
 Xamarin.Essentials.dll
 Xamarin.Forms.Platform.Android.dll
 Xamarin.Forms.Platform.dll

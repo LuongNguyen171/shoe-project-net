@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
 using shoe_project_xamarin.Models;
 using System;
-using System.Globalization;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -14,7 +13,9 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using shoe_project_server.Models.HostConfig;
 using shoe_project_xamarin.Models.DTOs.Order;
-using static Android.Resource;
+using shoe_project_xamarin.Views.MyPopup;
+using Xamarin.CommunityToolkit.Extensions;
+using Acr.UserDialogs;
 
 namespace shoe_project_xamarin.Views.Pages
 {
@@ -29,13 +30,13 @@ namespace shoe_project_xamarin.Views.Pages
             GetUserInfor();
             GetOrdersByCustomerIdAsync();
 
-            List<Order> orders = new List<Order>()
+            /* List<Order> orders = new List<Order>()
              {
-                 new Order() {orderId = 1, orderStatus = "Hoàn thành", orderDate = new DateTime(2024, 1, 3), deliveryDate  = new DateTime(2024, 1, 3), customerPhone = "123456"},
-                 new Order() {orderId = 2, orderStatus = "Đang giao", orderDate = new DateTime(2024, 1, 3), deliveryDate  = new DateTime(2024, 1, 3), customerPhone = "123456"},
-                 new Order() {orderId = 3, orderStatus = "Đang giao", orderDate = new DateTime(2024, 1, 3), deliveryDate  = new DateTime(2024, 1, 3), customerPhone = "123456"},
+                 new Order() {orderId = 1, orderStatus = "Hoàn thành", orderDate = new DateTime(), deliveryDate  = new DateTime(), customerPhone = "123456"},
+                 new Order() {orderId = 2, orderStatus = "Đang giao", orderDate = new DateTime(), deliveryDate  = new DateTime(), customerPhone = "123456"},
+                 new Order() {orderId = 3, orderStatus = "Đang giao", orderDate = new DateTime(), deliveryDate  = new DateTime(), customerPhone = "123456"},
              };
-            HistoryOrder.ItemsSource = orders;
+             HistoryOrder.ItemsSource = orders;*/
 
             List<Product> products = new List<Product>()
             {
@@ -45,11 +46,12 @@ namespace shoe_project_xamarin.Views.Pages
             };
             shippingOrder.ItemsSource = products;
         }
+        //get user infor
         private async void GetUserInfor()
         {
+            string accessToken = SecureStorage.GetAsync("AccessToken").Result;
             try
             {
-                string accessToken = SecureStorage.GetAsync("AccessToken").Result;
 
                 if (!string.IsNullOrEmpty(accessToken))
                 {
@@ -59,10 +61,13 @@ namespace shoe_project_xamarin.Views.Pages
 
                         client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
 
+                        UserDialogs.Instance.ShowLoading("Loading Please Wait...");
                         var response = await client.GetAsync(apiUrl);
+                        UserDialogs.Instance.HideLoading();
 
                         if (response.IsSuccessStatusCode)
                         {
+
                             var content = await response.Content.ReadAsStringAsync();
                             var userInfo = JsonConvert.DeserializeAnonymousType(content, new
                             {
@@ -70,27 +75,35 @@ namespace shoe_project_xamarin.Views.Pages
                                 userName = string.Empty,
                                 userEmail = string.Empty
                             });
+                            mainContentLayout.IsVisible = true;
+                            noDataLabel.IsVisible = false;
 
                             lblUserName.Text = userInfo.userName;
                             lblEmail.Text = userInfo.userEmail;
                         }
                         else
                         {
-                            lblUserName.Text = "Không có dữ liệu";
-                            lblEmail.Text = "Không có dữ liệu";
+                            mainContentLayout.IsVisible = false;
+                            noDataLabel.IsVisible = true;
                         }
                     }
+                }
+                else
+                {
+                    mainContentLayout.IsVisible = false;
+                    noDataLabel.IsVisible = true;
                 }
             }
             catch (Exception ex)
             {
 
-                lblUserName.Text = "Không có dữ liệu";
-                lblEmail.Text = "Không có dữ liệu";
+                mainContentLayout.IsVisible = false;
+                noDataLabel.IsVisible = true;
                 DisplayAlert("user!", $"{ex.Message}", "OK");
 
             }
         }
+        //get order by user
 
         private async Task<List<Order>> GetOrdersByCustomerIdAsync()
         {
@@ -106,7 +119,10 @@ namespace shoe_project_xamarin.Views.Pages
                         string apiUrl = apiSettings.BuildApiClientHost($"/order/getOrderByCustomer/{customerId}");
 
 
+                        UserDialogs.Instance.ShowLoading("Loading Please Wait...");
                         var response = await client.GetAsync(apiUrl);
+                        UserDialogs.Instance.HideLoading();
+
 
                         if (response.IsSuccessStatusCode)
                         {
@@ -127,19 +143,104 @@ namespace shoe_project_xamarin.Views.Pages
                         }
                         else
                         {
-                            DisplayAlert("Error!", "Failed to retrieve orders.", "OK");
+                            Console.WriteLine("Error!", "Failed to retrieve orders.", "OK");
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                DisplayAlert("Error!", $"An error occurred: {ex.Message}", "OK");
+                Console.WriteLine("Error!", $"An error occurred: {ex.Message}", "OK");
             }
 
             return null;
         }
+        //get order detail
+
+        private async Task<OrderDetail> GetOrderDetailAsync(int orderId)
+        {
+            try
+            {
+                using (var client = new HttpClient())
+                {
+
+                    string apiUrl = apiSettings.BuildApiClientHost($"/order/orderDetail/{orderId}");
+
+                    UserDialogs.Instance.ShowLoading("Loading Please Wait...");
+                    var response = await client.GetAsync(apiUrl);
+                    UserDialogs.Instance.HideLoading();
 
 
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var content = await response.Content.ReadAsStringAsync();
+                        var orderDetail = JsonConvert.DeserializeObject<OrderDetail>(content);
+
+
+                        return orderDetail;
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Failed to retrieve order detail. Status code: {response.StatusCode}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+
+            return null;
+        }
+        // handle click list view item
+
+        private void OnHistoryOrderItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            if (e.Item is CustomOrderResponse selectedOrder)
+            {
+                int orderId = selectedOrder.orderId;
+
+                HandleShowPopup(orderId);
+            }
+
+            ((ListView)sender).SelectedItem = null;
+        }
+
+        private async void HandleShowPopup(int orderId)
+        {
+            try
+            {
+                OrderDetail orderDetails = await GetOrderDetailAsync(orderId);
+                if (orderDetails != null)
+                {
+                    Navigation.ShowPopup(new OrderPlacedDetailPopup(orderDetails.productDetails, orderDetails.paymentInvoice));
+                }
+                else
+                {
+                    Console.WriteLine("Failed to retrieve order details.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+
+
+        }
+
+        private void logout_btn_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                SecureStorage.Remove("AccessToken");
+                SecureStorage.Remove("UserId");
+                Navigation.PushModalAsync(new Login());
+
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Error!", $"Cannot log out: {ex.Message}", "OK");
+            }
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using shoe_project_xamarin.Views.Pages;
+﻿using Acr.UserDialogs;
+using shoe_project_xamarin.Views.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,10 +24,24 @@ public partial class Header : ContentView
             /* Login loginPage = new Login();
              NavigationPage navigationPage = new NavigationPage(loginPage);
              App.Current.MainPage = navigationPage;*/
+            UserDialogs.Instance.ShowLoading("Loading Please Wait...");
+            Navigation.PushModalAsync(new Login());
+            UserDialogs.Instance.HideLoading();
 
-            _ = Shell.Current.GoToAsync("//login");
+
         }
 
-       
+        private void IconCart_Tapped(object sender, EventArgs e)
+        {
+           
+            UserDialogs.Instance.ShowLoading("Loading Please Wait...");
+            Navigation.PushAsync(new Cart());
+
+            UserDialogs.Instance.HideLoading();
+
+
+        }
+
+
     }
 }

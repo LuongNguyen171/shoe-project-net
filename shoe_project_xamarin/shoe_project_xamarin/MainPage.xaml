@@ -23,11 +23,5 @@
                       Icon="UserIcon.png"
                       ContentTemplate="{DataTemplate views:Account}"></ShellContent>
     </TabBar>
-    <ShellItem Route="login">
-        <ShellContent ContentTemplate="{DataTemplate views:Login}" />
-    </ShellItem>
-    <ShellItem Route="register">
-        <ShellContent ContentTemplate="{DataTemplate views:Register}" />
-    </ShellItem>
-
+ 
 </Shell>

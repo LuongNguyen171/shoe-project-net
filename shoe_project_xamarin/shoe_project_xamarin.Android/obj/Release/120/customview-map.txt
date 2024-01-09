@@ -11,8 +11,8 @@ androidx.appcompat.widget.Toolbar;D:\.NET\DoAn\shoe-project\shoe-project-net\sho
 androidx.coordinatorlayout.widget.CoordinatorLayout;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\62\jl\res\layout\rootlayout.xml
 androidx.coordinatorlayout.widget.CoordinatorLayout;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\62\jl\res\layout\shellcontent.xml
 attr;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\1\jl\res\values\attrs.xml
+attr;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\6\jl\res\values\attrs.xml
 attr;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\62\jl\res\values\attrs.xml
-attr;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\7\jl\res\values\attrs.xml
 background;obj\Release\120\res\mipmap-anydpi-v26\icon.xml
 background;obj\Release\120\res\mipmap-anydpi-v26\icon_round.xml
 cache-path;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\61\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
@@ -28,13 +28,14 @@ com.google.android.material.tabs.TabLayout;D:\.NET\DoAn\shoe-project\shoe-projec
 corners;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\1\jl\res\drawable\roundedbg.xml
 corners;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\1\jl\res\drawable\roundedbgdark.xml
 declare-styleable;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\1\jl\res\values\attrs.xml
+declare-styleable;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\6\jl\res\values\attrs.xml
 declare-styleable;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\62\jl\res\values\attrs.xml
-declare-styleable;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\7\jl\res\values\attrs.xml
-enum;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\7\jl\res\values\attrs.xml
+enum;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\6\jl\res\values\attrs.xml
 external-cache-path;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\61\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 external-path;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\61\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj\Release\120\res\mipmap-anydpi-v26\icon.xml
 foreground;obj\Release\120\res\mipmap-anydpi-v26\icon_round.xml
+FrameLayout;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\60\jl\res\layout\camerafragment.xml
 FrameLayout;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\62\jl\res\layout\bottomtablayout.xml
 gradient;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\1\jl\res\drawable\roundedbg.xml
 gradient;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\1\jl\res\drawable\roundedbgdark.xml
@@ -48,11 +49,11 @@ RelativeLayout;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\s
 RelativeLayout;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\1\jl\res\layout\loadingprogress.xml
 resources;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\1\jl\res\values\attrs.xml
 resources;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\1\jl\res\values\strings.xml
+resources;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\6\jl\res\values\attrs.xml
+resources;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\6\jl\res\values\strings.xml
 resources;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\62\jl\res\values\attrs.xml
 resources;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\62\jl\res\values\styles.xml
 resources;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\62\jl\res\values\strings.xml
-resources;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\7\jl\res\values\attrs.xml
-resources;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\7\jl\res\values\strings.xml
 resources;obj\Release\120\res\values\colors.xml
 resources;obj\Release\120\res\values\styles.xml
 set;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\62\jl\res\anim\enterfromleft.xml
@@ -64,8 +65,8 @@ shape;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_proje
 style;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\62\jl\res\values\styles.xml
 style;obj\Release\120\res\values\styles.xml
 string;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\1\jl\res\values\strings.xml
+string;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\6\jl\res\values\strings.xml
 string;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\62\jl\res\values\strings.xml
-string;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\7\jl\res\values\strings.xml
 TextView;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\1\jl\res\layout\loading.xml
 TextView;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\1\jl\res\layout\loadingimage.xml
 TextView;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\1\jl\res\layout\loadingprogress.xml
@@ -73,5 +74,6 @@ translate;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_p
 translate;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\62\jl\res\anim\enterfromright.xml
 translate;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\62\jl\res\anim\exittoleft.xml
 translate;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\62\jl\res\anim\exittoright.xml
+xamarin.communitytoolkit.ui.views.AutoFitTextureView;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\60\jl\res\layout\camerafragment.xml
 xamarin.forms.platform.android.appcompat.FormsViewPager;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\62\jl\res\layout\rootlayout.xml
 xamarin.forms.platform.android.ShellFlyoutLayout;D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Release\120\lp\62\jl\res\layout\flyoutcontent.xml
