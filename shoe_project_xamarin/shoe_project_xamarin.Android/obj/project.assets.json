@@ -38,6 +38,23 @@
           }
         }
       },
+      "CarouselView.FormsPlugin/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Android.CirclePageIndicator": "1.1.1",
+          "Xamarin.Android.VerticalViewPager": "1.1.2",
+          "Xamarin.AndroidX.ViewPager": "1.0.0.2",
+          "Xamarin.Forms": "4.8.0.1821"
+        },
+        "compile": {
+          "lib/MonoAndroid/CarouselView.FormsPlugin.Abstractions.dll": {},
+          "lib/MonoAndroid/CarouselView.FormsPlugin.Droid.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid/CarouselView.FormsPlugin.Abstractions.dll": {},
+          "lib/MonoAndroid/CarouselView.FormsPlugin.Droid.dll": {}
+        }
+      },
       "Dapper/2.1.24": {
         "type": "package",
         "dependencies": {
@@ -174,6 +191,30 @@
         },
         "runtime": {
           "lib/MonoAndroid10/_._": {}
+        }
+      },
+      "Xamarin.Android.CirclePageIndicator/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.ViewPager": "1.0.0.2"
+        },
+        "compile": {
+          "lib/MonoAndroid/Com.ViewPagerIndicator.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid/Com.ViewPagerIndicator.dll": {}
+        }
+      },
+      "Xamarin.Android.VerticalViewPager/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.ViewPager": "1.0.0.2"
+        },
+        "compile": {
+          "lib/MonoAndroid/Com.Android.DeskClock.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid/Com.Android.DeskClock.dll": {}
         }
       },
       "Xamarin.AndroidX.Activity/1.3.1.2": {
@@ -1965,6 +2006,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Acr.UserDialogs": "7.2.0.562",
+          "CarouselView.FormsPlugin": "6.0.0",
           "Newtonsoft.Json": "13.0.3",
           "Plugin.Toast": "2.2.0",
           "Rg.Plugins.Popup": "2.1.0",
@@ -2022,6 +2064,28 @@
         "lib/monoandroid81/AndHUD.dll",
         "lib/monoandroid81/AndHUD.pdb",
         "lib/monoandroid81/AndHUD.xml"
+      ]
+    },
+    "CarouselView.FormsPlugin/6.0.0": {
+      "sha512": "6O+/NNod+u5bO8EwNJOq2D2bHfV0NdarAUjrIBn4q6bsxgtX+ONo4JmKL2yBtRmKizoDOjM+r5GwO9ewePTGZg==",
+      "type": "package",
+      "path": "carouselview.formsplugin/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "carouselview.formsplugin.6.0.0.nupkg.sha512",
+        "carouselview.formsplugin.nuspec",
+        "lib/MonoAndroid/CarouselView.FormsPlugin.Abstractions.dll",
+        "lib/MonoAndroid/CarouselView.FormsPlugin.Droid.dll",
+        "lib/UAP10/CarouselView.FormsPlugin.Abstractions.dll",
+        "lib/UAP10/CarouselView.FormsPlugin.UWP.dll",
+        "lib/UAP10/CarouselView.FormsPlugin.UWP.pri",
+        "lib/UAP10/CarouselView.FormsPlugin.UWP/CarouselView.FormsPlugin.UWP.xr.xml",
+        "lib/UAP10/FlipViewControl.xbf",
+        "lib/Xamarin.iOS10/CarouselView.FormsPlugin.Abstractions.dll",
+        "lib/Xamarin.iOS10/CarouselView.FormsPlugin.iOS.dll",
+        "lib/netstandard2.0/CarouselView.FormsPlugin.Abstractions.dll",
+        "lib/portable-net45+netcore45/CarouselView.FormsPlugin.Abstractions.dll"
       ]
     },
     "Dapper/2.1.24": {
@@ -2344,6 +2408,30 @@
         "system.reflection.emit.lightweight.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Xamarin.Android.CirclePageIndicator/1.1.1": {
+      "sha512": "7gl/aeZ1kQ+RUSqdTtG+a1jGTniypTn5iZoQ12BiVTw0RB1zN6lKLk+KGZQAaOTpi0EOGkeeB5S67SljaGZwrA==",
+      "type": "package",
+      "path": "xamarin.android.circlepageindicator/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid/Com.ViewPagerIndicator.dll",
+        "xamarin.android.circlepageindicator.1.1.1.nupkg.sha512",
+        "xamarin.android.circlepageindicator.nuspec"
+      ]
+    },
+    "Xamarin.Android.VerticalViewPager/1.1.2": {
+      "sha512": "tOM4WVpY7XXXfB640yqn5V8duzRXQddxtrFMpm5hBuSj67/vUJ+5b4uE7SgZ+2BFPPKrxSQurXE31wfEMt0UIA==",
+      "type": "package",
+      "path": "xamarin.android.verticalviewpager/1.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid/Com.Android.DeskClock.dll",
+        "xamarin.android.verticalviewpager.1.1.2.nupkg.sha512",
+        "xamarin.android.verticalviewpager.nuspec"
       ]
     },
     "Xamarin.AndroidX.Activity/1.3.1.2": {
@@ -4002,14 +4090,6 @@
             "target": "Package",
             "version": "[2.1.24, )"
           },
-          "Dapper": {
-            "target": "Package",
-            "version": "[2.1.24, )"
-          },
-          "Rg.Plugins.Popup": {
-            "target": "Package",
-            "version": "[2.1.0, )"
-          },
           "Rg.Plugins.Popup": {
             "target": "Package",
             "version": "[2.1.0, )"
@@ -4017,14 +4097,6 @@
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.7.0, )"
-          },
-          "Xamarin.Essentials": {
-            "target": "Package",
-            "version": "[1.7.0, )"
-          },
-          "Xamarin.Forms": {
-            "target": "Package",
-            "version": "[5.0.0.2196, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
