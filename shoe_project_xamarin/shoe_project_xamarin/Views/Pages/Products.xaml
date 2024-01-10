@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="shoe_project_xamarin.Views.Pages.Products"
+             ControlTemplate="{StaticResource DefaultLayout}"
+             >
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Men's Shoes" FontSize="Large" TextColor="Black" Margin="20,10,0,0" FontAttributes="Bold"/>
+                <ScrollView Margin="20,10,0,10" Orientation="Horizontal" VerticalOptions="Start" VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
+                    <StackLayout Orientation="Horizontal" Spacing="20" VerticalOptions="Start">
+                        <Label Text="Lifestyle" FontSize="Medium" TextColor="Black" FontFamily="{StaticResource BoldFont}"/>
+                        <Label Text="Jordan" FontSize="Medium" TextColor="Black" FontFamily="{StaticResource BoldFont}"/>
+                        <Label Text="Running" FontSize="Medium" TextColor="Black" FontFamily="{StaticResource BoldFont}"/>
+                        <Label Text="Basketball" FontSize="Medium" TextColor="Black" FontFamily="{StaticResource BoldFont}"/>
+                        <Label Text="Football" FontSize="Medium" TextColor="Black" FontFamily="{StaticResource BoldFont}"/>
+                        <Label Text="Traning &amp; Gym" FontSize="Medium" TextColor="Black" FontFamily="{StaticResource BoldFont}"/>
+                        <Label Text="Skateboading" FontSize="Medium" TextColor="Black" FontFamily="{StaticResource BoldFont}"/>
+                        <Label Text="Golf" FontSize="Medium" TextColor="Black" FontFamily="{StaticResource BoldFont}"/>
+                        <Label Text="Tennis" FontSize="Medium" TextColor="Black" FontFamily="{StaticResource BoldFont}"/>
+                    </StackLayout>
+                </ScrollView>
+
+                <CollectionView x:Name="CVProducts" SelectionMode="Single">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="5"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+
+                                <Image Source="{Binding productImage}" Grid.Row="0" WidthRequest="100" HeightRequest="170" Aspect="Fill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+
+                                <StackLayout Grid.Row="1">
+                                    <Label Text="{Binding productName}" FontSize="18" MaxLines="1" TextColor="Black"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="4.1" FontSize="16" TextColor="Black"/>
+                                        <Image Source="star.png" Aspect="AspectFill" VerticalOptions="Center" HeightRequest="16" WidthRequest="16"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding productPrice, StringFormat='{0:0,0 vnđ}'}" FontSize="16" TextColor="Black" FontAttributes="Bold"/>
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                            <Image Source="FavouriteBlackIcon.png" Aspect="AspectFill" HeightRequest="16" WidthRequest="16" VerticalOptions="Center">
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer x:Name="FavouriteProduct" Tapped="FavouriteProduct_Tapped"></TapGestureRecognizer>
+                                                </Image.GestureRecognizers>
+                                            </Image>
+                                            <Image Source="icon_add.png" Aspect="Fill" VerticalOptions="Center" WidthRequest="20" HeightRequest="20"/>
+                                        </StackLayout>
+
+                                    </StackLayout>
+                                </StackLayout>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
