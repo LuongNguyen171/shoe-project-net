@@ -9,7 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "shoe_project_xamarin/1.0.0": {
         "dependencies": {
-          "Acr.UserDialogs": "7.2.0.562",
+          "Acr.UserDialogs": "7.2.0.564",
           "CarouselView.FormsPlugin": "6.0.0",
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "13.0.3",
@@ -25,7 +25,7 @@
           "shoe_project_xamarin.dll": {}
         }
       },
-      "Acr.UserDialogs/7.2.0.562": {
+      "Acr.UserDialogs/7.2.0.564": {
         "runtime": {
           "lib/netstandard2.0/Acr.UserDialogs.dll": {
             "assemblyVersion": "7.2.0.0",
@@ -215,12 +215,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Acr.UserDialogs/7.2.0.562": {
+    "Acr.UserDialogs/7.2.0.564": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-AOx6gb2pHSjn38Li/4EAZdQYgKTas9kYXoVJxZJONMbWlrDEUynk7TnqdxhN+yZVLAQpKMqEE5Jw4stZb5m/5w==",
-      "path": "acr.userdialogs/7.2.0.562",
-      "hashPath": "acr.userdialogs.7.2.0.562.nupkg.sha512"
+      "sha512": "sha512-RH+DT3EO/l12EyvOlhhilFizbVMOervE6bepyTccLlSWS+7m828huXefLBYgJ31PGCdiShteXIIkeIdUTRF4iQ==",
+      "path": "acr.userdialogs/7.2.0.564",
+      "hashPath": "acr.userdialogs.7.2.0.564.nupkg.sha512"
     },
     "CarouselView.FormsPlugin/6.0.0": {
       "type": "package",

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "IcGiUhkeSGtV83Ht8YjVgl/4dpheHv+aOFOlAfj+xe2//yoCEozCfAyo65sUqdZeOGAY7PO0o6aXBxeHvFofNQ==",
+  "dgSpecHash": "Gf6hDDge+y631n6iB+fi9SXv8Rvynk2l2cu3oVEeai4HeSjxbgZjxPMxdn99IpGb+JWp2XpQCl584AwdWA18XA==",
   "success": true,
   "projectFilePath": "D:\\.NET\\DoAn\\shoe-project\\shoe-project-net\\shoe_project_xamarin\\shoe_project_xamarin.Android\\shoe_project_xamarin.Android.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Admin\\.nuget\\packages\\acr.userdialogs\\7.2.0.562\\acr.userdialogs.7.2.0.562.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\acr.userdialogs\\7.2.0.564\\acr.userdialogs.7.2.0.564.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\andhud\\1.4.3\\andhud.1.4.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\carouselview.formsplugin\\6.0.0\\carouselview.formsplugin.6.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\dapper\\2.1.24\\dapper.2.1.24.nupkg.sha512",

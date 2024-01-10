@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "Acr.UserDialogs/7.2.0.562": {
+      "Acr.UserDialogs/7.2.0.564": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Acr.UserDialogs.dll": {
@@ -275,14 +275,14 @@
     }
   },
   "libraries": {
-    "Acr.UserDialogs/7.2.0.562": {
-      "sha512": "AOx6gb2pHSjn38Li/4EAZdQYgKTas9kYXoVJxZJONMbWlrDEUynk7TnqdxhN+yZVLAQpKMqEE5Jw4stZb5m/5w==",
+    "Acr.UserDialogs/7.2.0.564": {
+      "sha512": "RH+DT3EO/l12EyvOlhhilFizbVMOervE6bepyTccLlSWS+7m828huXefLBYgJ31PGCdiShteXIIkeIdUTRF4iQ==",
       "type": "package",
-      "path": "acr.userdialogs/7.2.0.562",
+      "path": "acr.userdialogs/7.2.0.564",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "acr.userdialogs.7.2.0.562.nupkg.sha512",
+        "acr.userdialogs.7.2.0.564.nupkg.sha512",
         "acr.userdialogs.nuspec",
         "lib/monoandroid10.0/Acr.UserDialogs.dll",
         "lib/monoandroid10.0/Acr.UserDialogs.xml",
@@ -1194,7 +1194,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "Acr.UserDialogs >= 7.2.0.562",
+      "Acr.UserDialogs >= 7.2.0.564",
       "CarouselView.FormsPlugin >= 6.0.0",
       "NETStandard.Library >= 2.0.3",
       "Newtonsoft.Json >= 13.0.3",
@@ -1253,7 +1253,7 @@
         "dependencies": {
           "Acr.UserDialogs": {
             "target": "Package",
-            "version": "[7.2.0.562, )"
+            "version": "[7.2.0.564, )"
           },
           "CarouselView.FormsPlugin": {
             "target": "Package",
