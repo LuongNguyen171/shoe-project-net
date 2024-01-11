@@ -1,1 +1,1 @@
-<Devices><Device id="52005c71ea2b15dd"><ResultingAbi>armeabi-v7a</ResultingAbi><ToolsAbi /><SdkVersion>28</SdkVersion><LongOutput>product:j7y17ltedx;model:SM_J730G;device:j7y17lte;transport_id:9</LongOutput></Device></Devices>
+<Devices><Device id="emulator-5554"><ResultingAbi>x86_64</ResultingAbi><ToolsAbi /><SdkVersion>30</SdkVersion><LongOutput>product:sdk_gphone_x86_64_arm64;model:sdk_gphone_x86_64_arm64;device:generic_x86_64_arm64;transport_id:10</LongOutput></Device></Devices>

@@ -9,27 +9,22 @@
 
     <TabBar Route="main"
             Title="MySportShop">
-        <ShellContent Title="Trang Chủ"
+        <ShellContent Title="Home"
                       Icon="./Assets/Images/homeIcon.png"
                       ContentTemplate="{DataTemplate views:Home}">
         </ShellContent>
        
-        <ShellContent Title="Sản Phẩm"
+        <ShellContent Title="Product"
                       Icon="CartIcon.png"
                       ContentTemplate="{DataTemplate views:Products}"></ShellContent>
        
-        <ShellContent Title="Giỏ hàng"
+        <ShellContent Title="Cart"
                       Icon="CartIcon.png"
                       ContentTemplate="{DataTemplate views:Cart}"></ShellContent>
-        <ShellContent Title="Tài khoản"
+        <ShellContent Title="My Account"
                       Icon="UserIcon.png"
                       ContentTemplate="{DataTemplate views:Account}"></ShellContent>
     </TabBar>
 
-    <ShellItem Route="login">
-        <ShellContent ContentTemplate="{DataTemplate views:Login}" />
-    </ShellItem>
-    <ShellItem Route="register">
-        <ShellContent ContentTemplate="{DataTemplate views:Register}" />
-    </ShellItem>
+    
 </Shell>

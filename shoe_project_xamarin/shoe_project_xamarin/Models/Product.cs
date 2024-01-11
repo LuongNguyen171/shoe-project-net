@@ -8,6 +8,6 @@ namespace shoe_project_xamarin.Models
         public string productName { get; set; }
         public decimal productPrice { get; set; }
         public string productImage { get; set; }
-        public string ProductDescribe { get; set; }
+        public string productDescribe { get; set; }
     }
 }

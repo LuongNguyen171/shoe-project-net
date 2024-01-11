@@ -22,7 +22,9 @@
                     </StackLayout>
                 </ScrollView>
 
-                <CollectionView x:Name="CVProducts" SelectionMode="Single">
+                <CollectionView x:Name="CVProducts"
+                                SelectionMode="Single"
+                                SelectionChanged="CVProducts_SelectionChanged">
                     <CollectionView.ItemsLayout>
                         <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="5"/>
                     </CollectionView.ItemsLayout>

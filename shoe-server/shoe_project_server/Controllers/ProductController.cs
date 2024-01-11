@@ -2,10 +2,11 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using shoe_project_server.Data;
+using shoe_project_server.Models;
 
 namespace shoe_project_server.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/product")]
     [ApiController]
     public class ProductController : ControllerBase
     {
@@ -34,6 +35,28 @@ namespace shoe_project_server.Controllers
             }
 
             return Ok(product);
+        }
+
+
+        [HttpGet("getProductImagesByProductId/{productId}")]
+        public async Task<IActionResult> GetProductImagesByProductId(int productId)
+        {
+            var productImages = await _context.productImages
+                .Where(pi => pi.productId == productId)
+                .Select(pi => new ProductImage
+                {
+                    productImageId = pi.productImageId,
+                    productId = pi.productId,
+                    productImage = pi.productImage
+                })
+                .ToListAsync();
+
+            if (productImages == null || !productImages.Any())
+            {
+                return NotFound("No product images found for the given productId.");
+            }
+
+            return Ok(productImages);
         }
     }
 }

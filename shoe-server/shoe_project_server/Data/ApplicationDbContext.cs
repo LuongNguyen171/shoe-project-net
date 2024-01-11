@@ -28,7 +28,13 @@ namespace shoe_project_server.Data
            .HasOne(ph => ph.Product)    
            .WithMany()
            .HasForeignKey(ph => ph.productId)
-           .OnDelete(DeleteBehavior.Restrict);  
+           .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<ProductImage>()
+          .HasOne(pi => pi.Product)
+          .WithMany()
+          .HasForeignKey(pi => pi.productId)
+          .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Favourite>()
               .HasKey(fa => new { fa.userId, fa.productId });

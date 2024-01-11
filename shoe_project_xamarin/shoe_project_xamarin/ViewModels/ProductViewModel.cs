@@ -53,7 +53,7 @@ namespace shoe_project_xamarin.ViewModels
             {
                 using (HttpClient client = new HttpClient())
                 {
-                    string apiUrl = apiSettings.BuildApiClientHost("/Product/getAllProducts");
+                    string apiUrl = apiSettings.BuildApiClientHost("/product/getAllProducts");
                     HttpResponseMessage response = await client.GetAsync(apiUrl);
 
                     string content = await response.Content.ReadAsStringAsync();
