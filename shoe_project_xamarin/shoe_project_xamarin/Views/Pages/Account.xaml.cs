@@ -40,9 +40,9 @@ namespace shoe_project_xamarin.Views.Pages
 
             List<Product> products = new List<Product>()
             {
-                new Product() { productId = 1, producerId = 1, productName = "Nike Air Force 1", productPrice = 2300000, ProductDescribe = "Basketball", productImage = "shoeimg.jpg"},
-                new Product() { productId = 2, producerId = 1, productName = "Nike Air Force 2", productPrice = 3000000, ProductDescribe = "Basketball", productImage = "shoeimg2.jpg"},
-                new Product() { productId = 3, producerId = 1, productName = "Nike Air Force 3", productPrice = 3500000, ProductDescribe = "Basketball", productImage = "shoeimg.jpg"},
+                new Product() { productId = 1, producerId = 1, productName = "Nike Air Force 1", productPrice = 2300000, productDescribe = "Basketball", productImage = "shoeimg.jpg"},
+                new Product() { productId = 2, producerId = 1, productName = "Nike Air Force 2", productPrice = 3000000, productDescribe = "Basketball", productImage = "shoeimg2.jpg"},
+                new Product() { productId = 3, producerId = 1, productName = "Nike Air Force 3", productPrice = 3500000, productDescribe = "Basketball", productImage = "shoeimg.jpg"},
             };
             shippingOrder.ItemsSource = products;
         }

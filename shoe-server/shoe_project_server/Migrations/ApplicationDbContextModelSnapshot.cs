@@ -464,7 +464,7 @@ namespace shoe_project_server.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("producId")
+                    b.Property<int>("productId")
                         .HasColumnType("int");
 
                     b.Property<string>("productImage")
@@ -473,7 +473,107 @@ namespace shoe_project_server.Migrations
 
                     b.HasKey("productImageId");
 
+                    b.HasIndex("productId");
+
                     b.ToTable("productImages");
+
+                    b.HasData(
+                        new
+                        {
+                            productImageId = 1,
+                            productId = 1,
+                            productImage = "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/57558712-5ebe-4abb-9984-879f9e896b4c/air-force-1-07-easyon-shoes-lpjTWM.png"
+                        },
+                        new
+                        {
+                            productImageId = 2,
+                            productId = 1,
+                            productImage = "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b39413f0-19c5-4721-8889-86e8156c4047/air-force-1-07-easyon-shoes-lpjTWM.png"
+                        },
+                        new
+                        {
+                            productImageId = 3,
+                            productId = 1,
+                            productImage = "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7849b40c-9e26-4896-bf85-6d27ac98d29d/air-force-1-07-easyon-shoes-lpjTWM.png"
+                        },
+                        new
+                        {
+                            productImageId = 4,
+                            productId = 1,
+                            productImage = "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/cc064523-78aa-4f06-b131-ef3943225168/air-force-1-07-easyon-shoes-lpjTWM.png"
+                        },
+                        new
+                        {
+                            productImageId = 5,
+                            productId = 2,
+                            productImage = "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c82501e4-317d-4cc4-bd10-e7c947ce31a0/gamma-force-shoes-CbTnH1.png"
+                        },
+                        new
+                        {
+                            productImageId = 6,
+                            productId = 2,
+                            productImage = "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/af0740bf-bab6-4a1d-93ea-dd4115b936fb/gamma-force-shoes-CbTnH1.png"
+                        },
+                        new
+                        {
+                            productImageId = 7,
+                            productId = 2,
+                            productImage = "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/9653f191-51fb-43df-aa85-398ae44d1295/gamma-force-shoes-CbTnH1.png"
+                        },
+                        new
+                        {
+                            productImageId = 8,
+                            productId = 2,
+                            productImage = "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/53692ee7-26db-4e4f-906f-45eeebc46ec4/gamma-force-shoes-CbTnH1.png"
+                        },
+                        new
+                        {
+                            productImageId = 9,
+                            productId = 3,
+                            productImage = "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/2b050e6a-4647-4647-babb-32b1fa8d33a6/lebron-xxi-tahitian-younger-older-basketball-shoes-Q0HDBH.png"
+                        },
+                        new
+                        {
+                            productImageId = 10,
+                            productId = 3,
+                            productImage = "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a56f1cff-1334-477b-926e-b07e4fcb4729/lebron-xxi-tahitian-younger-older-basketball-shoes-Q0HDBH.png"
+                        },
+                        new
+                        {
+                            productImageId = 11,
+                            productId = 3,
+                            productImage = "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/24fc445c-b42f-42f2-b134-ae849cba631e/lebron-xxi-tahitian-younger-older-basketball-shoes-Q0HDBH.png"
+                        },
+                        new
+                        {
+                            productImageId = 12,
+                            productId = 3,
+                            productImage = "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/6c39c260-aeb3-48cd-aaee-5f013c1b1016/lebron-xxi-tahitian-younger-older-basketball-shoes-Q0HDBH.png"
+                        },
+                        new
+                        {
+                            productImageId = 13,
+                            productId = 8,
+                            productImage = "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/416e1d81-a6ed-4401-93d1-e5e26ea37a8d/air-force-1-07-shoes-CMNWtG.png"
+                        },
+                        new
+                        {
+                            productImageId = 14,
+                            productId = 8,
+                            productImage = "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/df294700-a1c1-49f8-827f-8d254400a71b/air-force-1-07-shoes-CMNWtG.png"
+                        },
+                        new
+                        {
+                            productImageId = 15,
+                            productId = 8,
+                            productImage = "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3b6360aa-fa59-4c97-9504-28c856f79759/air-force-1-07-shoes-CMNWtG.png"
+                        },
+                        new
+                        {
+                            productImageId = 16,
+                            productId = 8,
+                            productImage = "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/cba89489-eb3b-485a-8d12-02b01fc49f25/air-force-1-07-shoes-CMNWtG.png"
+                        });
                 });
 
             modelBuilder.Entity("shoe_project_server.Models.PurchaseHistory", b =>
@@ -546,6 +646,17 @@ namespace shoe_project_server.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("shoe_project_server.Models.ProductImage", b =>
+                {
+                    b.HasOne("shoe_project_server.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("productId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("shoe_project_server.Models.PurchaseHistory", b =>

@@ -28,7 +28,7 @@ namespace shoe_project_xamarin.Views.Pages
 
         private async void LoadProducts()
         {
-            string apiUrl = apiSettings.BuildApiClientHost("/Product/getAllProducts");
+            string apiUrl = apiSettings.BuildApiClientHost("/product/getAllProducts");
             try
             {
                 using (HttpClient client = new HttpClient())
@@ -59,5 +59,19 @@ namespace shoe_project_xamarin.Views.Pages
                 imageSender.Source = "FavouriteRedIcon.png";
             }
         }
+
+        private async void CVProducts_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.CurrentSelection != null && e.CurrentSelection.Count > 0)
+            {
+                var selectedProduct = (Product)e.CurrentSelection.First();
+
+                await Navigation.PushAsync(new ProductDetail(selectedProduct));
+
+                ((CollectionView)sender).SelectedItem = null;
+            }
+        }
+
+       
     }
 }

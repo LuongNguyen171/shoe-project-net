@@ -97,6 +97,12 @@ D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xam
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug\120\res\drawable\star.png
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug\120\res\drawable\favouriteredicon.png
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug\120\res\drawable\favouriteblackicon.png
+D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug\120\res\drawable\sneaker_shoe_icon.jpg
+D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug\120\res\drawable\football_shoe_icon.jpg
+D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug\120\res\drawable\running_shoe_icon.jpg
+D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug\120\res\drawable\women_shoe_icon.jpg
+D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug\120\res\drawable\men_shoe_icon.jpg
+D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug\120\res\drawable\sandals_shoe_icon.jpg
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug\120\uploadflags.txt
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug\120\resolvedassemblies.hash
 D:\.NET\DoAn\shoe-project\shoe-project-net\shoe_project_xamarin\shoe_project_xamarin.Android\obj\Debug\120\android\assets\Acr.UserDialogs.dll

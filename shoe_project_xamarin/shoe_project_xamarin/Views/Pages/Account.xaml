@@ -26,14 +26,14 @@
                     <Label x:Name="lblUserName"
                            HorizontalOptions="Center"
                            FontAttributes="Bold"
-                           Text="Không có dữ liệu!"
+                           Text="No data!"
                            FontSize="22" />
                     <Label x:Name="lblEmail"
-                           Text="Không có dữ liệu!"
+                           Text="No data!"
                            HorizontalOptions="Center" />
                     <!--Shipping Order-->
                     <StackLayout Margin="0,20,0,0">
-                        <Label Text="Đơn hàng đang giao"
+                        <Label Text="Order is being delivered"
                                Margin="10,0,0,0"
                                FontAttributes="Bold"
                                FontSize="20" />
@@ -108,7 +108,7 @@
                     </StackLayout>
                     <!--Order History-->
                     <StackLayout Margin="0,20,0,0">
-                        <Label Text="Lịch sử đặt hàng"
+                        <Label Text="Order history"
                                Margin="10,0,0,0"
                                FontAttributes="Bold"
                                FontSize="20" />
@@ -128,16 +128,16 @@
                                         <RowDefinition Height="25" />
                                     </Grid.RowDefinitions>
                                     <Label Grid.Column="0"
-                                           Text="Mã đơn"
+                                           Text="Id"
                                            FontAttributes="Bold" />
                                     <Label Grid.Column="1"
-                                           Text="Trạng thái"
+                                           Text="Status"
                                            FontAttributes="Bold" />
                                     <Label Grid.Column="2"
-                                           Text="Ngày đặt"
+                                           Text="Booking date"
                                            FontAttributes="Bold" />
                                     <Label Grid.Column="3"
-                                           Text="Ngày giao"
+                                           Text="Delivery date"
                                            FontAttributes="Bold" />
                                 </Grid>
                                 <ListView x:Name="HistoryOrder"

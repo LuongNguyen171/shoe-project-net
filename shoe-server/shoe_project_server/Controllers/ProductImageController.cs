@@ -20,7 +20,7 @@ namespace shoe_project_server.Controllers
         public async Task<IActionResult> GetImagesByProductId(int productId)
         {
             var images = await _context.productImages
-                .Where(img => img.producId == productId)
+                .Where(img => img.productId == productId)
                 .ToListAsync();
 
             if (images == null || !images.Any())

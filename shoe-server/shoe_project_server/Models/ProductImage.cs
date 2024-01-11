@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace shoe_project_server.Models
 {
@@ -6,7 +7,10 @@ namespace shoe_project_server.Models
     {
         [Key]
         public int productImageId { get; set; }
-        public int producId { get; set; }
+        public int productId { get; set; }
         public string productImage { get; set; }
+
+        [ForeignKey("productId")]
+        public Product Product { get; set; }
     }
 }
